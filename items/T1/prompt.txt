@@ -1,0 +1,20 @@
+Problem:
+In circle O, line PA is tangent at A. Chord AB is drawn, and point C lies on the circle (on the arc BA not containing A). 
+Given ∠PAB = 31°, find ∠ACB.
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

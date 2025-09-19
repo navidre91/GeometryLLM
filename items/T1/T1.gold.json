@@ -1,0 +1,20 @@
+{
+  "id": "T1",
+  "ask": "angle(ACB)",
+  "gold": {
+    "answer": {
+      "value": 31,
+      "unit": "deg",
+      "tol": 0
+    },
+    "reasoning_keys": [
+      "tangent-chord angle equals inscribed angle subtending same chord",
+      "∠PAB equals ∠ACB"
+    ],
+    "error_tags": [
+      "TG",
+      "AC",
+      "LC"
+    ]
+  }
+}

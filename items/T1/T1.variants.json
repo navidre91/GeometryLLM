@@ -1,0 +1,39 @@
+[
+  {
+    "variant_id": "T1_full_txtimg",
+    "text_included": true,
+    "image": "T1.svg"
+  },
+  {
+    "variant_id": "T1_img_only",
+    "text_included": false,
+    "image": "T1.svg"
+  },
+  {
+    "variant_id": "T1_txt_only",
+    "text_included": true,
+    "image": null
+  },
+  {
+    "variant_id": "T1_adversarial",
+    "text_included": true,
+    "image": "T1_adversarial.svg",
+    "render_ops": [
+      "rotate10",
+      "thin_symbols"
+    ]
+  },
+  {
+    "variant_id": "T1_mark_removed",
+    "text_included": true,
+    "image": "T1_no_t31.svg",
+    "mark_removed": [
+      "t31"
+    ],
+    "text_drop": [
+      "Given ∠PAB = 31°"
+    ],
+    "expected_effect": "flip_or_invalidate",
+    "decisive_symbol": "t31"
+  }
+]

@@ -1,0 +1,155 @@
+{
+  "points": [
+    {
+      "id": "O",
+      "x": 200,
+      "y": 200
+    },
+    {
+      "id": "A",
+      "x": 340,
+      "y": 200
+    },
+    {
+      "id": "B",
+      "x": 130,
+      "y": 79
+    },
+    {
+      "id": "C",
+      "x": 270,
+      "y": 79
+    },
+    {
+      "id": "P",
+      "x": 340,
+      "y": 40
+    }
+  ],
+  "lines": [
+    {
+      "id": "PA",
+      "p1": "P",
+      "p2": "A"
+    },
+    {
+      "id": "AB",
+      "p1": "A",
+      "p2": "B"
+    },
+    {
+      "id": "OA",
+      "p1": "O",
+      "p2": "A"
+    },
+    {
+      "id": "AC",
+      "p1": "A",
+      "p2": "C"
+    },
+    {
+      "id": "BC",
+      "p1": "B",
+      "p2": "C"
+    }
+  ],
+  "circles": [
+    {
+      "id": "circleO",
+      "center": "O",
+      "radius": 140
+    }
+  ],
+  "arcs": [],
+  "symbols": [
+    {
+      "id": "tangA",
+      "type": "tangent_mark",
+      "targets": [
+        "PA",
+        "A"
+      ]
+    },
+    {
+      "id": "ang_PAB",
+      "type": "angle_arc",
+      "targets": [
+        "PA",
+        "AB",
+        "A"
+      ]
+    },
+    {
+      "id": "perp_OA_PA",
+      "type": "perpendicular",
+      "targets": [
+        "OA",
+        "PA"
+      ]
+    }
+  ],
+  "texts": [
+    {
+      "id": "t31",
+      "string": "31°",
+      "anchor": "A"
+    },
+    {
+      "id": "lblA",
+      "string": "A",
+      "anchor": "A"
+    },
+    {
+      "id": "lblB",
+      "string": "B",
+      "anchor": "B"
+    },
+    {
+      "id": "lblC",
+      "string": "C",
+      "anchor": "C"
+    },
+    {
+      "id": "lblP",
+      "string": "P",
+      "anchor": "P"
+    },
+    {
+      "id": "lblO",
+      "string": "O",
+      "anchor": "O"
+    }
+  ],
+  "relations": [
+    {
+      "type": "sym2geo",
+      "symbol_id": "tangA",
+      "target_ids": [
+        "PA",
+        "A"
+      ]
+    },
+    {
+      "type": "sym2geo",
+      "symbol_id": "ang_PAB",
+      "target_ids": [
+        "PA",
+        "AB",
+        "A"
+      ]
+    },
+    {
+      "type": "sym2geo",
+      "symbol_id": "perp_OA_PA",
+      "target_ids": [
+        "OA",
+        "PA"
+      ]
+    },
+    {
+      "type": "text2geo",
+      "text_id": "t31",
+      "target_id": "ang_PAB"
+    }
+  ]
+}
