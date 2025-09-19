@@ -1,0 +1,8 @@
+{
+  "id": "geo905-origin",
+  "answer": "30°",
+  "choices": null,
+  "question_type": "open-ended",
+  "subset": "origin",
+  "split": "validation"
+}

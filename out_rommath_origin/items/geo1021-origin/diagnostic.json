@@ -1,0 +1,10 @@
+{
+  "category": "not-to-scale-vs-marked",
+  "scores": {
+    "tangent-secant": 0,
+    "arc-vs-chord": 0,
+    "invented-parallel-perp": 0,
+    "label-anchoring": 0,
+    "not-to-scale-vs-marked": 1
+  }
+}

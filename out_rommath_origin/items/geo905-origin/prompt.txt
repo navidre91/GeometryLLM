@@ -1,0 +1,18 @@
+As shown in the figure, AB is the diameter of circle O, and points D and C are on circle O. AD is parallel to OC, and ∠DAB = 60°. Connect AC, then what is ∠DAC equal to?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

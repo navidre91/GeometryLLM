@@ -1,0 +1,13 @@
+{
+  "id": "geo698-origin",
+  "answer": "A",
+  "choices": {
+    "A": "6",
+    "B": "3",
+    "C": "8",
+    "D": "10"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

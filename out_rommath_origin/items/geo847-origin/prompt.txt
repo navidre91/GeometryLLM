@@ -1,0 +1,18 @@
+As shown in the figure, P is a point on the diagonal BD of the rhombus ABCD. PE is perpendicular to AB at E, and PE = 4 cm. What is the distance from point P to BC?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

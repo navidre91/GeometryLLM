@@ -1,0 +1,18 @@
+As shown in the figure, points A, E, and B are on circle O. The inscribed angle ∠ACE is 25°, and ∠BDE is 15°. What is the measure of the central angle ∠AOB?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

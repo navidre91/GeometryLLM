@@ -31,5 +31,11 @@
     "text_included": true,
     "image": "assets/figure_rot180.png",
     "expected_effect": "no_change"
+  },
+  {
+    "variant_id": "geo655-origin_circle_enclose",
+    "text_included": true,
+    "image": "assets/figure_circle.png",
+    "expected_effect": "no_change"
   }
 ]

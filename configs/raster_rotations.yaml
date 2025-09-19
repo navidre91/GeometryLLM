@@ -1,4 +1,4 @@
-# Auto-generated rotation variants
+# Auto-generated rotation + enclosing circle variants
 items:
   - id: geo137-origin
     base_image: assets/figure.png
@@ -13,6 +13,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo137-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -26,6 +27,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo137-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -39,6 +41,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo137-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo137-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo231-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -52,6 +69,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo231-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -65,6 +83,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo231-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -78,6 +97,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo231-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo231-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo233-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -91,6 +125,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo233-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -104,6 +139,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo233-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -117,6 +153,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo233-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo233-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo313-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -130,6 +181,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo313-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -143,6 +195,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo313-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -156,6 +209,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo313-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo313-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo321-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -169,6 +237,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo321-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -182,6 +251,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo321-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -195,6 +265,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo321-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo321-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo328-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -208,6 +293,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo328-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -221,6 +307,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo328-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -234,6 +321,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo328-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo328-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo338-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -247,6 +349,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo338-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -260,6 +363,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo338-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -273,6 +377,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo338-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo338-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo373-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -286,6 +405,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo373-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -299,6 +419,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo373-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -312,6 +433,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo373-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo373-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo435-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -325,6 +461,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo435-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -338,6 +475,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo435-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -351,6 +489,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo435-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo435-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo485-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -364,6 +517,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo485-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -377,6 +531,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo485-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -390,6 +545,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo485-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo485-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo489-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -403,6 +573,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo489-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -416,6 +587,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo489-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -429,6 +601,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo489-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo489-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo492-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -442,6 +629,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo492-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -455,6 +643,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo492-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -468,6 +657,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo492-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo492-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo500-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -481,6 +685,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo500-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -494,6 +699,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo500-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -507,6 +713,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo500-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo500-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo501-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -520,6 +741,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo501-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -533,6 +755,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo501-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -546,6 +769,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo501-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo501-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo508-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -559,6 +797,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo508-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -572,6 +811,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo508-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -585,6 +825,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo508-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo508-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo509-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -598,6 +853,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo509-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -611,6 +867,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo509-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -624,6 +881,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo509-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo509-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo557-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -637,6 +909,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo557-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -650,6 +923,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo557-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -663,6 +937,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo557-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo557-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo578-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -676,6 +965,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo578-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -689,6 +979,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo578-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -702,6 +993,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo578-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo578-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo585-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -715,6 +1021,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo585-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -728,6 +1035,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo585-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -741,6 +1049,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo585-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo585-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo609-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -754,6 +1077,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo609-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -767,6 +1091,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo609-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -780,6 +1105,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo609-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo609-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo619-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -793,6 +1133,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo619-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -806,6 +1147,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo619-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -819,6 +1161,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo619-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo619-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo655-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -832,6 +1189,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo655-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -845,6 +1203,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo655-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -858,6 +1217,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo655-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo655-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo663-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -871,6 +1245,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo663-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -884,6 +1259,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo663-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -897,6 +1273,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo663-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo663-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo689-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -910,6 +1301,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo689-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -923,6 +1315,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo689-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -936,6 +1329,21 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo689-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo689-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8
   - id: geo697-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot30.png
@@ -949,6 +1357,7 @@ items:
         angle: 30
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo697-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot90.png
@@ -962,6 +1371,7 @@ items:
         angle: 90
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
   - id: geo697-origin
     base_image: assets/figure.png
     output_image: assets/figure_rot180.png
@@ -975,3 +1385,18 @@ items:
         angle: 180
         expand: true
         fill: [255, 255, 255, 255]
+        keep_size: true
+  - id: geo697-origin
+    base_image: assets/figure.png
+    output_image: assets/figure_circle.png
+    variant:
+      variant_id: geo697-origin_circle_enclose
+      text_included: true
+      image: assets/figure_circle.png
+      expected_effect: no_change
+    operations:
+      - type: draw_circle
+        fit: cover
+        margin: 20
+        outline: [0, 0, 0, 255]
+        width: 8

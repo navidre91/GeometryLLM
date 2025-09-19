@@ -173,5 +173,96 @@
     "subset": "origin",
     "split": "validation",
     "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo698-origin",
+    "dir": "out_rommath_origin/items/geo698-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo713-origin",
+    "dir": "out_rommath_origin/items/geo713-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo738-origin",
+    "dir": "out_rommath_origin/items/geo738-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo739-origin",
+    "dir": "out_rommath_origin/items/geo739-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo751-origin",
+    "dir": "out_rommath_origin/items/geo751-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "not-to-scale-vs-marked"
+  },
+  {
+    "id": "geo847-origin",
+    "dir": "out_rommath_origin/items/geo847-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo875-origin",
+    "dir": "out_rommath_origin/items/geo875-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo905-origin",
+    "dir": "out_rommath_origin/items/geo905-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo932-origin",
+    "dir": "out_rommath_origin/items/geo932-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo977-origin",
+    "dir": "out_rommath_origin/items/geo977-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo1021-origin",
+    "dir": "out_rommath_origin/items/geo1021-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "not-to-scale-vs-marked"
+  },
+  {
+    "id": "geo1025-origin",
+    "dir": "out_rommath_origin/items/geo1025-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo1045-origin",
+    "dir": "out_rommath_origin/items/geo1045-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "tangent-secant"
   }
 ]

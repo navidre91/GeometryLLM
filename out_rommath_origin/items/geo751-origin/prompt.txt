@@ -1,0 +1,18 @@
+As shown in the figure, two equilateral triangles with areas of 9 and 16 respectively overlap, resulting in two shaded areas with areas a and b (a < b). What is the value of b - a?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

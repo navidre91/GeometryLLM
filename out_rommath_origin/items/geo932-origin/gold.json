@@ -1,0 +1,8 @@
+{
+  "id": "geo932-origin",
+  "answer": "110°",
+  "choices": null,
+  "question_type": "open-ended",
+  "subset": "origin",
+  "split": "validation"
+}

@@ -1,0 +1,18 @@
+As shown in the figure, PA is the tangent to circle O at point A, PO=2, and ∠APO=30°. What is the length of PA?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

@@ -32,6 +32,7 @@ Run with::
 Operations supported:
     * ``erase_rect``  – fill an axis-aligned rectangle.
     * ``draw_line``   – draw a straight line between two points.
+    * ``draw_circle`` – draw a circle/ellipse outline (optionally covering the whole figure).
     * ``add_text``    – overlay text (uses default PIL font unless ``font_path`` provided).
     * ``copy_paste``  – copy a rectangular patch elsewhere.
     * ``blur_rect``   – blur a rectangular patch with Gaussian blur.
@@ -132,6 +133,28 @@ def apply_operation(image: Image.Image, op: Operation) -> Image.Image:
             raise ValueError("draw_line requires points=[x1,y1,x2,y2,...]")
         width = int(op.get("width", 3))
         draw.line(points, fill=color_tuple(op.get("color"), default=(0, 0, 0, 255)), width=width)
+        return image
+
+    elif op_type == "draw_circle":
+        fit = op.get("fit")
+        if fit == "cover":
+            w, h = image.size
+            cx, cy = w / 2.0, h / 2.0
+            margin = float(op.get("margin", 0.0))
+            radius = max(w, h) / 2.0 + margin
+        else:
+            center = op.get("center")
+            radius = op.get("radius")
+            if not (isinstance(center, (list, tuple)) and len(center) == 2 and radius is not None):
+                raise ValueError("draw_circle requires center=[x,y] and radius unless fit='cover'")
+            cx, cy = float(center[0]), float(center[1])
+            radius = float(radius)
+        outline_color = color_tuple(op.get("outline"), default=(0, 0, 0, 255))
+        fill_raw = op.get("fill")
+        fill_color = color_tuple(fill_raw) if fill_raw is not None else None
+        width = int(op.get("width", 6))
+        bbox = (cx - radius, cy - radius, cx + radius, cy + radius)
+        draw.ellipse(bbox, outline=outline_color, width=width, fill=fill_color)
         return image
 
     elif op_type == "add_text":
