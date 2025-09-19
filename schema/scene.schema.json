@@ -1,0 +1,191 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Geometry Scene",
+  "type": "object",
+  "required": [
+    "points",
+    "primitives",
+    "symbols",
+    "texts",
+    "relations",
+    "givens",
+    "ask",
+    "gold"
+  ],
+  "properties": {
+    "points": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "x", "y"],
+        "properties": {
+          "id": {"type": "string"},
+          "x": {"type": "number"},
+          "y": {"type": "number"}
+        }
+      }
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["type", "id", "p1", "p2"],
+            "properties": {
+              "type": {"const": "Line"},
+              "id": {"type": "string"},
+              "p1": {"type": "string"},
+              "p2": {"type": "string"}
+            }
+          },
+          {
+            "type": "object",
+            "required": ["type", "id", "center", "radius"],
+            "properties": {
+              "type": {"const": "Circle"},
+              "id": {"type": "string"},
+              "center": {"type": "string"},
+              "radius": {"type": "number", "minimum": 0}
+            }
+          },
+          {
+            "type": "object",
+            "required": ["type", "id", "circle", "start", "end"],
+            "properties": {
+              "type": {"const": "Arc"},
+              "id": {"type": "string"},
+              "circle": {"type": "string"},
+              "start": {"type": "string"},
+              "end": {"type": "string"},
+              "measure_deg": {"type": "number"}
+            }
+          }
+        ]
+      }
+    },
+    "symbols": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "targets"],
+        "properties": {
+          "id": {"type": "string"},
+          "type": {
+            "enum": [
+              "angle_arc",
+              "tick_bar",
+              "parallel",
+              "perpendicular",
+              "tangent_mark"
+            ]
+          },
+          "targets": {
+            "type": "array",
+            "items": {"type": ["string", "array"]}
+          }
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "string", "anchor"],
+        "properties": {
+          "id": {"type": "string"},
+          "string": {"type": "string"},
+          "anchor": {"type": "string"}
+        }
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {"enum": ["sym2geo", "text2geo"]},
+          "symbol_id": {"type": "string"},
+          "target_ids": {
+            "type": "array",
+            "items": {"type": "string"}
+          },
+          "text_id": {"type": "string"},
+          "target_id": {"type": "string"}
+        }
+      }
+    },
+    "givens": {
+      "type": "object",
+      "properties": {
+        "arcs": {
+          "type": "object",
+          "additionalProperties": {"type": "number"}
+        },
+        "lengths": {
+          "type": "object",
+          "additionalProperties": {"type": "number"}
+        },
+        "angles": {
+          "type": "object",
+          "additionalProperties": {"type": "number"}
+        },
+        "parallel": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 2
+          }
+        },
+        "perpendicular": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 2
+          }
+        },
+        "tangent": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["line", "at"],
+            "properties": {
+              "line": {"type": "string"},
+              "at": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "ask": {"type": "string"},
+    "gold": {
+      "type": "object",
+      "required": ["answer", "reasoning_keys", "error_tags"],
+      "properties": {
+        "answer": {
+          "type": "object",
+          "required": ["value", "unit"],
+          "properties": {
+            "value": {"type": ["number", "string"]},
+            "unit": {"type": "string"},
+            "tol": {"type": "number", "minimum": 0}
+          }
+        },
+        "reasoning_keys": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "error_tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["GP", "TG", "AC", "LC", "NS"]
+          }
+        }
+      }
+    }
+  }
+}
