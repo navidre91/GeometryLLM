@@ -96,34 +96,49 @@
   ],
   "texts": [
     {
-      "id": "t31",
-      "string": "31\u00b0",
-      "anchor": "A"
-    },
-    {
       "id": "lblA",
       "string": "A",
-      "anchor": "A"
+      "anchor": "A",
+      "offset": [
+        8,
+        -8
+      ]
     },
     {
       "id": "lblB",
       "string": "B",
-      "anchor": "B"
+      "anchor": "B",
+      "offset": [
+        -12,
+        -8
+      ]
     },
     {
       "id": "lblC",
       "string": "C",
-      "anchor": "C"
+      "anchor": "C",
+      "offset": [
+        8,
+        -8
+      ]
     },
     {
       "id": "lblP",
       "string": "P",
-      "anchor": "P"
+      "anchor": "P",
+      "offset": [
+        8,
+        -8
+      ]
     },
     {
       "id": "lblO",
       "string": "O",
-      "anchor": "O"
+      "anchor": "O",
+      "offset": [
+        -10,
+        14
+      ]
     }
   ],
   "relations": [
@@ -151,11 +166,6 @@
         "OA",
         "PA"
       ]
-    },
-    {
-      "type": "text2geo",
-      "text_id": "t31",
-      "target_id": "ang_PAB"
     }
   ]
 }

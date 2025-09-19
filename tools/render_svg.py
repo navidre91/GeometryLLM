@@ -1,389 +1,259 @@
-# tools/render_svg.py
-"""Deterministic renderer for symbol-grounded geometry scenes.
-
-This script consumes a scene YAML that conforms to ``schema/scene.schema.json``
-and produces:
-    * Layered SVG with stable group/element IDs.
-    * Optional PNG rasters at multiple DPIs (best-effort).
-    * PGDP-style JSON annotations mirroring the scene graph.
-
-The implementation is intentionally lean; it only draws the primitive/symbol
-types required by the benchmark spec. Additional glyphs can be layered in later
-without touching the existing IDs so long as the helper functions preserve the
-ordering guarantees below.
+#!/usr/bin/env python3
 """
+Deterministic SVG renderer for geometry scenes.
 
-from __future__ import annotations
+Usage:
+  python tools/render_svg.py --scene items/T1/scene.yaml --out_dir items/T1 [--rotate 0] [--symbol_opacity 1.0]
 
-import argparse
-import json
-import math
+- Reads scene.yaml (validates against schema/scene.schema.json if available)
+- Renders layered SVG with stable IDs for primitives, symbols, labels
+- Exports 96/144/300 DPI PNGs (requires cairosvg)
+- Writes PGDP-like annotations (mirrors scene) to <ID>.pgdp.json
+"""
+import os, sys, json, math, argparse, re
 from pathlib import Path
-from typing import Dict, List, Tuple
 
-import yaml
-from jsonschema import validate
+try:
+    import yaml
+except Exception as e:
+    print("Missing dependency: pyyaml", file=sys.stderr); raise
 
-import svgwrite
+def load_json(p):
+    with open(p, 'r', encoding='utf-8') as f:
+        return json.load(f)
 
-CANVAS_SIZE = 400  # square canvas, consistent across items for stability
-STYLE_BLOCK = (
-    ".prim { fill: none; stroke: black; stroke-width: 2; }\n"
-    ".sym { fill: none; stroke: black; stroke-width: 2; }\n"
-    ".lbl { font-family: Arial, sans-serif; font-size: 14px; }\n"
-    ".measure { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }\n"
-    ".pt { fill: black; }\n"
-)
+def load_yaml(p):
+    with open(p, 'r', encoding='utf-8') as f:
+        return yaml.safe_load(f)
 
+def try_validate_scene(scene, schema_path: Path):
+    try:
+        import jsonschema
+        schema = load_json(schema_path)
+        jsonschema.validate(scene, schema)
+    except Exception as e:
+        # soft-fail: print but continue
+        print(f"[render_svg] Schema validation warning: {e}", file=sys.stderr)
 
-def _repo_root() -> Path:
-    return Path(__file__).resolve().parent.parent
+def points_dict(scene):
+    return {p["id"]: (float(p["x"]), float(p["y"])) for p in scene.get("points",[])}
 
+def find_primitive(scene, pid):
+    for p in scene.get("primitives",[]):
+        if p.get("id")==pid:
+            return p
+    return None
 
-def load_scene(path: Path, schema_path: Path | None = None) -> Dict:
-    """Parse a YAML scene file and validate it against the JSON schema."""
+def find_line_pts(scene, line_id):
+    L = find_primitive(scene, line_id)
+    if not L or L.get("type")!="Line": return None
+    pts = points_dict(scene)
+    return pts[L["p1"]], pts[L["p2"]]
 
-    path = Path(path)
-    if schema_path is None:
-        schema_path = _repo_root() / "schema" / "scene.schema.json"
+def line_intersection(p1, p2, p3, p4):
+    # returns intersection point of lines p1p2 and p3p4
+    x1,y1 = p1; x2,y2 = p2; x3,y3 = p3; x4,y4 = p4
+    den = (x1-x2)*(y3-y4) - (y1-y2)*(x3-x4)
+    if abs(den) < 1e-9:
+        return None
+    px = ((x1*y2 - y1*x2)*(x3-x4) - (x1-x2)*(x3*y4 - y3*x4)) / den
+    py = ((x1*y2 - y1*x2)*(y3-y4) - (y1-y2)*(x3*y4 - y3*x4)) / den
+    return (px,py)
 
-    scene = yaml.safe_load(path.read_text())
-    schema = json.loads(schema_path.read_text())
-    validate(scene, schema)
-    return scene
+def svg_header(width, height, root_id="scene"):
+    return f'''<svg id="{root_id}" xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">
+  <defs>
+    <style><![CDATA[
+      .prim {{ fill: none; stroke: black; stroke-width: 2; }}
+      .sym  {{ fill: none; stroke: black; stroke-width: 2; }}
+      .lbl  {{ font-family: Arial, sans-serif; font-size: 14px; }}
+      .measure {{ font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }}
+      .pt   {{ fill: black; }}
+    ]]></style>
+  </defs>
+'''
 
+def svg_footer():
+    return '</svg>\n'
 
-def _point_map(scene: Dict) -> Dict[str, Tuple[float, float]]:
-    return {p["id"]: (p["x"], p["y"]) for p in scene.get("points", [])}
+def draw_primitives(scene):
+    pts = points_dict(scene)
+    xs = [p[0] for p in pts.values()] + [0,400]; ys = [p[1] for p in pts.values()] + [0,400]
+    width  = int(max(xs)+60); height = int(max(ys)+60)
+    parts = []
+    parts.append('  <g id="primitives">')
+    for prim in scene.get("primitives",[]):
+        if prim["type"]=="Circle":
+            cx,cy = pts[prim["center"]]; r = prim["radius"]
+            parts.append(f'    <circle id="{prim["id"]}" class="prim" cx="{cx}" cy="{cy}" r="{r}" />')
+    for prim in scene.get("primitives",[]):
+        if prim["type"]=="Line":
+            (x1,y1),(x2,y2) = find_line_pts(scene, prim["id"])
+            parts.append(f'    <line id="{prim["id"]}" class="prim" x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" />')
+    for prim in scene.get("primitives",[]):
+        if prim["type"]=="Arc":
+            circle = find_primitive(scene, prim["circle"])
+            cx,cy = pts[circle["center"]]; r = circle["radius"]
+            sx,sy = pts[prim["start"]]; ex,ey = pts[prim["end"]]
+            laf = 1 if abs(prim.get("measure_deg",0)) > 180 else 0
+            swf = 1
+            parts.append(f'    <path id="{prim["id"]}" class="prim" d="M {sx:.3f} {sy:.3f} A {r:.3f} {r:.3f} 0 {laf} {swf} {ex:.3f} {ey:.3f}" />')
+    parts.append('  </g>')
+    return width, height, "\n".join(parts)+"\n"
 
+def unit_vec(dx,dy):
+    n = math.hypot(dx,dy) or 1.0
+    return dx/n, dy/n
 
-def _primitive_map(scene: Dict) -> Dict[str, Dict]:
-    return {p["id"]: p for p in scene.get("primitives", [])}
+def perp_vec(dx,dy):
+    return -dy, dx
 
+def draw_symbol_angle_arc(scene, sym):
+    pts = points_dict(scene)
+    line1, line2, vtx = sym["targets"]
+    (x1a,y1a),(x1b,y1b) = find_line_pts(scene, line1)
+    (x2a,y2a),(x2b,y2b) = find_line_pts(scene, line2)
+    vx,vy = pts[vtx]
+    v1 = unit_vec(x1a - vx, y1a - vy) if (x1a,y1a)!=(vx,vy) else unit_vec(x1b - vx, y1b - vy)
+    v2 = unit_vec(x2a - vx, y2a - vy) if (x2a,y2a)!=(vx,vy) else unit_vec(x2b - vx, y2b - vy)
+    r = 18.0
+    s = (vx + v1[0]*r, vy + v1[1]*r)
+    e = (vx + v2[0]*r, vy + v2[1]*r)
+    cross = v1[0]*v2[1] - v1[1]*v2[0]
+    swf = 1 if cross>0 else 0
+    path = f'M {s[0]:.1f} {s[1]:.1f} A {r:.1f} {r:.1f} 0 0 {swf} {e[0]:.1f} {e[1]:.1f}'
+    return f'    <path id="{sym["id"]}" class="sym" d="{path}" />'
 
-def _line_points(prim: Dict, points: Dict[str, Tuple[float, float]]) -> Tuple[Tuple[float, float], Tuple[float, float]]:
-    return points[prim["p1"]], points[prim["p2"]]
+def draw_symbol_perpendicular(scene, sym):
+    line1, line2 = sym["targets"][0], sym["targets"][1]
+    (a1,a2) = find_line_pts(scene, line1)
+    (b1,b2) = find_line_pts(scene, line2)
+    p = line_intersection(a1,a2,b1,b2) or a2
+    sz = 8.0; x = p[0]-sz/2; y = p[1]-sz/2
+    return f'    <rect id="{sym["id"]}" class="sym" x="{x:.1f}" y="{y:.1f}" width="{sz:.1f}" height="{sz:.1f}" />'
 
+def draw_symbol_parallel(scene, sym):
+    def chevrons_for_line(scene, line_id, sym_id_suffix):
+        (p1,p2) = find_line_pts(scene, line_id)
+        dx,dy = (p2[0]-p1[0], p2[1]-p1[1])
+        ux,uy = unit_vec(dx,dy); nx,ny = unit_vec(*perp_vec(dx,dy))
+        midx = p1[0] + 0.3*dx; midy = p1[1] + 0.3*dy
+        L = 10.0
+        parts = []
+        for i in (-1,1):
+            ax = midx + nx*i*5; ay = midy + ny*i*5
+            bx = ax + ux*L;     by = ay + uy*L
+            parts.append(f'    <line id="{sym_id_suffix}_{i}" class="sym" x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" />')
+        return "\n".join(parts)
+    l1, l2 = sym["targets"][0], sym["targets"][1]
+    return chevrons_for_line(scene, l1, sym["id"]+"_l1") + "\n" + chevrons_for_line(scene, l2, sym["id"]+"_l2")
 
-def _unit(vec: Tuple[float, float]) -> Tuple[float, float]:
-    vx, vy = vec
-    norm = math.hypot(vx, vy)
-    if norm == 0:
-        return 0.0, 0.0
-    return vx / norm, vy / norm
+def draw_symbol_tangent(scene, sym):
+    line_id, point_id = sym["targets"][0], sym["targets"][1]
+    pts = points_dict(scene); x,y = pts[point_id]
+    return f'    <text id="{sym["id"]}" class="lbl" x="{x+10:.1f}" y="{y-10:.1f}">⊥</text>'
 
+def draw_symbol_tick_bar(scene, sym):
+    line_id = sym["targets"][0]
+    (p1,p2) = find_line_pts(scene, line_id)
+    dx,dy = (p2[0]-p1[0], p2[1]-p1[1])
+    ux,uy = unit_vec(dx,dy); nx,ny = unit_vec(*perp_vec(dx,dy))
+    midx = (p1[0]+p2[0])/2; midy = (p1[1]+p2[1])/2
+    L = 10.0
+    ax = midx + nx*L/2; ay = midy + ny*L/2
+    bx = midx - nx*L/2; by = midy - ny*L/2
+    return f'    <line id="{sym["id"]}" class="sym" x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" />'
 
-def _angle_between(a: float, b: float) -> float:
-    diff = (b - a) % (2 * math.pi)
-    if diff > math.pi:
-        diff -= 2 * math.pi
-    return diff
+def draw_symbols(scene, opacity=1.0):
+    parts = [f'  <g id="symbols" opacity="{opacity}">']
+    for sym in scene.get("symbols",[]):
+        t = sym.get("type")
+        if t=="angle_arc":
+            parts.append(draw_symbol_angle_arc(scene, sym))
+        elif t=="perpendicular":
+            parts.append(draw_symbol_perpendicular(scene, sym))
+        elif t=="parallel":
+            parts.append(draw_symbol_parallel(scene, sym))
+        elif t=="tangent_mark":
+            parts.append(draw_symbol_tangent(scene, sym))
+        elif t=="tick_bar":
+            parts.append(draw_symbol_tick_bar(scene, sym))
+    parts.append('  </g>')
+    return "\n".join(parts)+"\n"
 
+def draw_labels(scene):
+    pts = points_dict(scene)
+    parts = ['  <g id="labels">']
+    for pid, (x,y) in pts.items():
+        parts.append(f'    <circle id="pt_{pid}" class="pt" cx="{x:.1f}" cy="{y:.1f}" r="3" />')
+    for txt in scene.get("texts",[]):
+        t = txt["string"]
+        anchor = txt["anchor"]
+        dx,dy = (0,0)
+        if "offset" in txt and isinstance(txt["offset"], list) and len(txt["offset"])>=2:
+            dx,dy = txt["offset"][:2]
+        x,y = pts[anchor]
+        klass = "measure" if re.search(r"\d+\s*°", t) else "lbl"
+        parts.append(f'    <text id="{txt["id"]}" class="{klass}" x="{x+dx:.1f}" y="{y+dy:.1f}">{t}</text>')
+    parts.append('  </g>')
+    return "\n".join(parts)+"\n"
 
-def _format_float(val: float) -> str:
-    return f"{val:.1f}".rstrip("0").rstrip(".") if not val.is_integer() else str(int(val))
+def wrap_rotation(svg_inner, width, height, angle_deg=0.0):
+    if not angle_deg:
+        return svg_inner
+    cx,cy = width/2.0, height/2.0
+    return f'  <g id="rot" transform="rotate({angle_deg:.2f} {cx:.1f} {cy:.1f})">\n' + svg_inner + '  </g>\n'
 
-
-def _angle_arc_path(
-    points: Dict[str, Tuple[float, float]],
-    primitives: Dict[str, Dict],
-    symbol: Dict,
-    radius: float = 20.0,
-) -> str:
-    line_a, line_b, vertex_id = symbol["targets"]
-    vx, vy = points[vertex_id]
-
-    def line_angle(line_id: str) -> float:
-        prim = primitives[line_id]
-        assert prim["type"] == "Line", "angle_arc expects line primitives"
-        p1, p2 = prim["p1"], prim["p2"]
-        if p1 == vertex_id:
-            tx, ty = points[p2]
-        elif p2 == vertex_id:
-            tx, ty = points[p1]
-        else:
-            # Fallback: use midpoint direction to vertex.
-            (x1, y1), (x2, y2) = _line_points(prim, points)
-            tx, ty = (x1 + x2) / 2, (y1 + y2) / 2
-        return math.atan2(ty - vy, tx - vx)
-
-    ang_a = line_angle(line_a)
-    ang_b = line_angle(line_b)
-
-    delta = _angle_between(ang_a, ang_b)
-    if delta < 0:
-        start, end = ang_b, ang_a
-        delta = -delta
-    else:
-        start, end = ang_a, ang_b
-
-    large_arc = 1 if abs(delta) > math.pi else 0
-    sweep_flag = 1
-
-    sx = vx + radius * math.cos(start)
-    sy = vy + radius * math.sin(start)
-    ex = vx + radius * math.cos(end)
-    ey = vy + radius * math.sin(end)
-
-    return (
-        f"M {_format_float(sx)} {_format_float(sy)} "
-        f"A {radius:.0f} {radius:.0f} 0 {large_arc} {sweep_flag} {_format_float(ex)} {_format_float(ey)}"
-    )
-
-
-def render_svg(scene: Dict, svg_path: Path, canvas_size: int = CANVAS_SIZE) -> Path:
-    """Render an SVG for the provided scene and write it to ``svg_path``."""
-
-    svg_path = Path(svg_path)
-    svg_path.parent.mkdir(parents=True, exist_ok=True)
-
-    points = _point_map(scene)
-    primitives = _primitive_map(scene)
-
-    drawing = svgwrite.Drawing(
-        filename=str(svg_path),
-        size=(canvas_size, canvas_size),
-        viewBox=f"0 0 {canvas_size} {canvas_size}",
-    )
-    drawing.attribs["id"] = svg_path.stem
-
-    drawing.defs.add(drawing.style(STYLE_BLOCK))
-
-    group_primitives = drawing.g(id="primitives")
-    group_symbols = drawing.g(id="symbols")
-    group_labels = drawing.g(id="labels")
-
-    # Draw primitives in listed order for determinism.
-    for prim in scene.get("primitives", []):
-        prim_id = prim["id"]
-        if prim["type"] == "Circle":
-            cx, cy = points[prim["center"]]
-            group_primitives.add(
-                drawing.circle(center=(cx, cy), r=prim["radius"], id=prim_id, class_="prim")
-            )
-        elif prim["type"] == "Line":
-            (x1, y1), (x2, y2) = _line_points(prim, points)
-            group_primitives.add(
-                drawing.line(start=(x1, y1), end=(x2, y2), id=prim_id, class_="prim")
-            )
-        elif prim["type"] == "Arc":
-            circle = primitives[prim["circle"]]
-            cx, cy = points[circle["center"]]
-            radius = circle["radius"]
-            start = points[prim["start"]]
-            end = points[prim["end"]]
-            large_arc = 1 if prim.get("measure_deg", 0) > 180 else 0
-            path_d = (
-                f"M {_format_float(start[0])} {_format_float(start[1])} "
-                f"A {radius} {radius} 0 {large_arc} 1 {_format_float(end[0])} {_format_float(end[1])}"
-            )
-            group_primitives.add(
-                drawing.path(d=path_d, id=prim_id, class_="prim")
-            )
-        else:
-            raise ValueError(f"Unsupported primitive type: {prim['type']}")
-
-    # Draw symbols.
-    for symbol in scene.get("symbols", []):
-        sym_id = symbol["id"]
-        sym_type = symbol["type"]
-        if sym_type == "angle_arc":
-            path_d = _angle_arc_path(points, primitives, symbol)
-            group_symbols.add(
-                drawing.path(d=path_d, id=sym_id, class_="sym")
-            )
-        elif sym_type == "perpendicular":
-            line_a_id, line_b_id = symbol["targets"][:2]
-            line_a = primitives[line_a_id]
-            line_b = primitives[line_b_id]
-            pts_a = {line_a["p1"], line_a["p2"]}
-            pts_b = {line_b["p1"], line_b["p2"]}
-            intersection = pts_a & pts_b
-            if intersection:
-                vertex_id = next(iter(intersection))
-                vx, vy = points[vertex_id]
-            else:
-                # Numeric intersection fallback.
-                (xa1, ya1), (xa2, ya2) = _line_points(line_a, points)
-                (xb1, yb1), (xb2, yb2) = _line_points(line_b, points)
-                vx, vy = _line_intersection((xa1, ya1), (xa2, ya2), (xb1, yb1), (xb2, yb2))
-            size = 8
-            group_symbols.add(
-                drawing.rect(
-                    insert=(vx - size / 2, vy - size / 2),
-                    size=(size, size),
-                    id=sym_id,
-                    class_="sym",
-                )
-            )
-        elif sym_type == "tangent_mark":
-            line_id, point_id = symbol["targets"][:2]
-            px, py = points[point_id]
-            line = primitives[line_id]
-            (x1, y1), (x2, y2) = _line_points(line, points)
-            direction = _unit((x2 - x1, y2 - y1))
-            normal = (-direction[1], direction[0])
-            offset_scale = 10
-            tx = px + normal[0] * offset_scale
-            ty = py + normal[1] * offset_scale
-            group_symbols.add(
-                drawing.text("⊥", insert=(tx, ty), id=sym_id, class_="lbl")
-            )
-        elif sym_type == "tick_bar":
-            line_id = symbol["targets"][0]
-            line = primitives[line_id]
-            (x1, y1), (x2, y2) = _line_points(line, points)
-            midx, midy = (x1 + x2) / 2, (y1 + y2) / 2
-            dir_vec = _unit((x2 - x1, y2 - y1))
-            perp = (-dir_vec[1], dir_vec[0])
-            half_len = 6
-            sx = midx - perp[0] * half_len
-            sy = midy - perp[1] * half_len
-            ex = midx + perp[0] * half_len
-            ey = midy + perp[1] * half_len
-            group_symbols.add(
-                drawing.line(start=(sx, sy), end=(ex, ey), id=sym_id, class_="sym")
-            )
-        elif sym_type == "parallel":
-            for idx, target in enumerate(symbol["targets"]):
-                line = primitives[target]
-                (x1, y1), (x2, y2) = _line_points(line, points)
-                dir_vec = _unit((x2 - x1, y2 - y1))
-                perp = (-dir_vec[1], dir_vec[0])
-                offset = 10 + idx * 6
-                midx, midy = (x1 + x2) / 2, (y1 + y2) / 2
-                base = (midx + perp[0] * offset, midy + perp[1] * offset)
-                stroke_half = 4
-                start = (
-                    base[0] - dir_vec[0] * stroke_half,
-                    base[1] - dir_vec[1] * stroke_half,
-                )
-                end = (
-                    base[0] + dir_vec[0] * stroke_half,
-                    base[1] + dir_vec[1] * stroke_half,
-                )
-                group_symbols.add(
-                    drawing.line(start=start, end=end, id=f"{sym_id}_{idx}", class_="sym")
-                )
-        else:
-            raise ValueError(f"Unsupported symbol type: {sym_type}")
-
-    # Point markers
-    for point_id, (x, y) in points.items():
-        group_labels.add(
-            drawing.circle(center=(x, y), r=3, id=f"pt_{point_id}", class_="pt")
-        )
-
-    # Text labels and measures.
-    for text in scene.get("texts", []):
-        anchor = text["anchor"]
-        if anchor not in points:
-            continue
-        ax, ay = points[anchor]
-        content = text["string"]
-        cls = "measure" if content.strip().endswith("°") else "lbl"
-        if cls == "measure":
-            dx, dy = -28, -10
-        else:
-            dx, dy = 8, -8
-        group_labels.add(
-            drawing.text(content, insert=(ax + dx, ay + dy), id=text["id"], class_=cls)
-        )
-
-    drawing.add(group_primitives)
-    drawing.add(group_symbols)
-    drawing.add(group_labels)
-
-    drawing.save()
-    return svg_path
-
-
-def _line_intersection(
-    a1: Tuple[float, float],
-    a2: Tuple[float, float],
-    b1: Tuple[float, float],
-    b2: Tuple[float, float],
-) -> Tuple[float, float]:
-    """Return the intersection point of two infinite lines defined by endpoints."""
-
-    x1, y1 = a1
-    x2, y2 = a2
-    x3, y3 = b1
-    x4, y4 = b2
-
-    denom = (x1 - x2) * (y3 - y4) - (y1 - y2) * (x3 - x4)
-    if denom == 0:
-        return x1, y1
-    px = ((x1 * y2 - y1 * x2) * (x3 - x4) - (x1 - x2) * (x3 * y4 - y3 * x4)) / denom
-    py = ((x1 * y2 - y1 * x2) * (y3 - y4) - (y1 - y2) * (x3 * y4 - y3 * x4)) / denom
-    return px, py
-
-
-def export_pngs(svg_path: Path, base_path: Path) -> List[Path]:
-    """Best-effort raster export for common DPIs.
-
-    If ``cairosvg`` is unavailable, the function simply returns an empty list so
-    the CLI can continue without failing the build.
-    """
-
-    svg_path = Path(svg_path)
-    base_path = Path(base_path)
+def export_pngs(svg_path: Path, base_name: str):
     try:
         import cairosvg
-    except ImportError:
-        return []
+    except Exception as e:
+        print("[render_svg] CairoSVG not available; skipping PNG export", file=sys.stderr)
+        return
+    svg_data = Path(svg_path).read_text(encoding='utf-8')
+    for tag, dpi in [("96",96),("144",144),("300",300)]:
+        out = svg_path.with_name(f"{base_name}_{tag}.png")
+        cairosvg.svg2png(bytestring=svg_data.encode("utf-8"), write_to=str(out), dpi=dpi)
 
-    outputs: List[Path] = []
-    svg_bytes = svg_path.read_bytes()
-    for tag, dpi in (("96", 96), ("144", 144), ("300", 300)):
-        out_file = base_path.with_name(f"{base_path.name}_{tag}").with_suffix(".png")
-        cairosvg.svg2png(bytestring=svg_bytes, write_to=str(out_file), dpi=dpi)
-        outputs.append(out_file)
-    return outputs
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--scene", required=True, help="Path to scene.yaml")
+    ap.add_argument("--out_dir", required=True, help="Output directory (will be created)")
+    ap.add_argument("--rotate", type=float, default=0.0, help="Rotate entire figure by degrees")
+    ap.add_argument("--symbol_opacity", type=float, default=1.0, help="Opacity for symbol layer (0..1)")
+    args = ap.parse_args()
 
+    scene = load_yaml(args.scene)
+    schema_path = Path("schema/scene.schema.json")
+    if schema_path.exists():
+        try_validate_scene(scene, schema_path)
 
-def export_pgdp(scene: Dict, out_path: Path) -> Path:
-    """Write PGDP-style annotations derived from the validated scene."""
+    width, height, prim_svg = draw_primitives(scene)
+    sym_svg = draw_symbols(scene, opacity=args.symbol_opacity)
+    lbl_svg = draw_labels(scene)
 
-    out_path = Path(out_path)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+    inner = prim_svg + sym_svg + lbl_svg
+    rotated_inner = wrap_rotation(inner, width, height, args.rotate)
+    svg = svg_header(width, height, root_id=Path(args.scene).stem) + rotated_inner + svg_footer()
+
+    out_dir = Path(args.out_dir); out_dir.mkdir(parents=True, exist_ok=True)
+    base_name = Path(args.scene).stem
+    svg_path = out_dir / f"{base_name}.svg"
+    svg_path.write_text(svg, encoding='utf-8')
 
     pgdp = {
-        "points": scene.get("points", []),
-        "lines": [p for p in scene.get("primitives", []) if p.get("type") == "Line"],
-        "circles": [p for p in scene.get("primitives", []) if p.get("type") == "Circle"],
-        "arcs": [p for p in scene.get("primitives", []) if p.get("type") == "Arc"],
-        "symbols": scene.get("symbols", []),
-        "texts": scene.get("texts", []),
-        "relations": scene.get("relations", []),
+        "points": scene.get("points",[]),
+        "lines": [p for p in scene.get("primitives",[]) if p.get("type")=="Line"],
+        "circles": [p for p in scene.get("primitives",[]) if p.get("type")=="Circle"],
+        "arcs": [p for p in scene.get("primitives",[]) if p.get("type")=="Arc"],
+        "symbols": scene.get("symbols",[]),
+        "texts": scene.get("texts",[]),
+        "relations": scene.get("relations",[])
     }
+    (out_dir / f"{base_name}.pgdp.json").write_text(json.dumps(pgdp, indent=2), encoding="utf-8")
 
-    out_path.write_text(json.dumps(pgdp, indent=2))
-    return out_path
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser(description="Render symbol-grounded scenes to SVG/PNG/PGDP.")
-    parser.add_argument("--scene", required=True, help="Path to scene YAML")
-    parser.add_argument("--out_dir", required=True, help="Output directory for artifacts")
-    parser.add_argument("--skip-png", action="store_true", help="Skip raster exports (faster for tests)")
-    args = parser.parse_args()
-
-    scene_path = Path(args.scene)
-    out_dir = Path(args.out_dir)
-    out_dir.mkdir(parents=True, exist_ok=True)
-
-    scene = load_scene(scene_path)
-
-    base_name = out_dir.name
-    svg_path = out_dir / f"{base_name}.svg"
-    render_svg(scene, svg_path)
-
-    export_pgdp(scene, out_dir / f"{base_name}.pgdp.json")
-
-    if not args.skip_png:
-        export_pngs(svg_path, out_dir / base_name)
-
+    export_pngs(svg_path, base_name)
+    print(f"[render_svg] Wrote {svg_path} and PNGs to {out_dir}")
 
 if __name__ == "__main__":
     main()

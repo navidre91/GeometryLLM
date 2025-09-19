@@ -31,7 +31,7 @@
       "t31"
     ],
     "text_drop": [
-      "Given ∠PAB = 31°"
+      "Given \u2220PAB = 31\u00b0"
     ],
     "expected_effect": "flip_or_invalidate",
     "decisive_symbol": "t31"

@@ -1,5 +1,5 @@
-import json, yaml, jsonschema, pathlib
 
+import json, yaml, jsonschema, pathlib
 def test_scene_validates():
     root = pathlib.Path("items/T1")
     scene = yaml.safe_load(open(root/"scene.yaml"))

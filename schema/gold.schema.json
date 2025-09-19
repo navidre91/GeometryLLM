@@ -2,15 +2,47 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Gold",
   "type": "object",
-  "required": ["answer","reasoning_keys","error_tags"],
+  "required": [
+    "answer",
+    "reasoning_keys",
+    "error_tags"
+  ],
   "properties": {
     "answer": {
       "type": "object",
-      "required": ["value","unit"],
-      "properties": { "value":{"type":"number"}, "unit":{"type":"string"}, "tol":{"type":"number"} }
+      "required": [
+        "value",
+        "unit"
+      ],
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "tol": {
+          "type": "number"
+        }
+      }
     },
-    "acceptable": { "type":"array", "items":{"type":"string"} },
-    "reasoning_keys": { "type":"array", "items":{"type":"string"} },
-    "error_tags": { "type":"array", "items":{"type":"string"} }
+    "acceptable": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning_keys": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "error_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
   }
 }

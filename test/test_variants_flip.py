@@ -1,3 +1,4 @@
+
 import json, pathlib
 def test_mark_removed_variant_declares_decisive_symbol():
     v = json.load(open("items/T1/T1.variants.json"))

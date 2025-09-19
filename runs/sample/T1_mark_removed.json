@@ -1,0 +1,15 @@
+{
+  "final_answer": "31°",
+  "figure_facts_used": [
+    "OA ⟂ PA",
+    "PA tangent@ A",
+    "∠PAB = 31°"
+  ],
+  "text_givens_used": [
+    "∠PAB = 31°"
+  ],
+  "assumptions": [
+    "none"
+  ],
+  "explanation": "By tangent-chord theorem, the angle between tangent PA and chord AB equals the inscribed angle subtending AB, so ∠ACB = 31°."
+}

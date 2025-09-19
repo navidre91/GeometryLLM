@@ -9,7 +9,7 @@
     },
     "reasoning_keys": [
       "tangent-chord angle equals inscribed angle subtending same chord",
-      "∠PAB equals ∠ACB"
+      "\u2220PAB equals \u2220ACB"
     ],
     "error_tags": [
       "TG",

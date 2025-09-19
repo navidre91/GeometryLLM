@@ -60,21 +60,39 @@ texts:
 - id: t31
   string: 31°
   anchor: A
+  offset:
+  - -28
+  - -10
 - id: lblA
   string: A
   anchor: A
+  offset:
+  - 8
+  - -8
 - id: lblB
   string: B
   anchor: B
+  offset:
+  - -12
+  - -8
 - id: lblC
   string: C
   anchor: C
+  offset:
+  - 8
+  - -8
 - id: lblP
   string: P
   anchor: P
+  offset:
+  - 8
+  - -8
 - id: lblO
   string: O
   anchor: O
+  offset:
+  - -10
+  - 14
 relations:
 - type: sym2geo
   symbol_id: tangA

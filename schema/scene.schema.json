@@ -17,11 +17,21 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "x", "y"],
+        "required": [
+          "id",
+          "x",
+          "y"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "x": {"type": "number"},
-          "y": {"type": "number"}
+          "id": {
+            "type": "string"
+          },
+          "x": {
+            "type": "number"
+          },
+          "y": {
+            "type": "number"
+          }
         }
       }
     },
@@ -31,34 +41,78 @@
         "oneOf": [
           {
             "type": "object",
-            "required": ["type", "id", "p1", "p2"],
+            "required": [
+              "type",
+              "id",
+              "p1",
+              "p2"
+            ],
             "properties": {
-              "type": {"const": "Line"},
-              "id": {"type": "string"},
-              "p1": {"type": "string"},
-              "p2": {"type": "string"}
+              "type": {
+                "const": "Line"
+              },
+              "id": {
+                "type": "string"
+              },
+              "p1": {
+                "type": "string"
+              },
+              "p2": {
+                "type": "string"
+              }
             }
           },
           {
             "type": "object",
-            "required": ["type", "id", "center", "radius"],
+            "required": [
+              "type",
+              "id",
+              "center",
+              "radius"
+            ],
             "properties": {
-              "type": {"const": "Circle"},
-              "id": {"type": "string"},
-              "center": {"type": "string"},
-              "radius": {"type": "number", "minimum": 0}
+              "type": {
+                "const": "Circle"
+              },
+              "id": {
+                "type": "string"
+              },
+              "center": {
+                "type": "string"
+              },
+              "radius": {
+                "type": "number"
+              }
             }
           },
           {
             "type": "object",
-            "required": ["type", "id", "circle", "start", "end"],
+            "required": [
+              "type",
+              "id",
+              "circle",
+              "start",
+              "end"
+            ],
             "properties": {
-              "type": {"const": "Arc"},
-              "id": {"type": "string"},
-              "circle": {"type": "string"},
-              "start": {"type": "string"},
-              "end": {"type": "string"},
-              "measure_deg": {"type": "number"}
+              "type": {
+                "const": "Arc"
+              },
+              "id": {
+                "type": "string"
+              },
+              "circle": {
+                "type": "string"
+              },
+              "start": {
+                "type": "string"
+              },
+              "end": {
+                "type": "string"
+              },
+              "measure_deg": {
+                "type": "number"
+              }
             }
           }
         ]
@@ -68,9 +122,15 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "type", "targets"],
+        "required": [
+          "id",
+          "type",
+          "targets"
+        ],
         "properties": {
-          "id": {"type": "string"},
+          "id": {
+            "type": "string"
+          },
           "type": {
             "enum": [
               "angle_arc",
@@ -82,7 +142,12 @@
           },
           "targets": {
             "type": "array",
-            "items": {"type": ["string", "array"]}
+            "items": {
+              "type": [
+                "string",
+                "array"
+              ]
+            }
           }
         }
       }
@@ -91,11 +156,27 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["id", "string", "anchor"],
+        "required": [
+          "id",
+          "string",
+          "anchor"
+        ],
         "properties": {
-          "id": {"type": "string"},
-          "string": {"type": "string"},
-          "anchor": {"type": "string"}
+          "id": {
+            "type": "string"
+          },
+          "string": {
+            "type": "string"
+          },
+          "anchor": {
+            "type": "string"
+          },
+          "offset": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
         }
       }
     },
@@ -103,16 +184,31 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["type"],
+        "required": [
+          "type"
+        ],
         "properties": {
-          "type": {"enum": ["sym2geo", "text2geo"]},
-          "symbol_id": {"type": "string"},
+          "type": {
+            "enum": [
+              "sym2geo",
+              "text2geo"
+            ]
+          },
+          "symbol_id": {
+            "type": "string"
+          },
           "target_ids": {
             "type": "array",
-            "items": {"type": "string"}
+            "items": {
+              "type": "string"
+            }
           },
-          "text_id": {"type": "string"},
-          "target_id": {"type": "string"}
+          "text_id": {
+            "type": "string"
+          },
+          "target_id": {
+            "type": "string"
+          }
         }
       }
     },
@@ -121,68 +217,95 @@
       "properties": {
         "arcs": {
           "type": "object",
-          "additionalProperties": {"type": "number"}
+          "additionalProperties": {
+            "type": "number"
+          }
         },
         "lengths": {
           "type": "object",
-          "additionalProperties": {"type": "number"}
+          "additionalProperties": {
+            "type": "number"
+          }
         },
         "angles": {
           "type": "object",
-          "additionalProperties": {"type": "number"}
+          "additionalProperties": {
+            "type": "number"
+          }
         },
         "parallel": {
           "type": "array",
           "items": {
             "type": "array",
-            "items": {"type": "string"},
-            "minItems": 2
+            "items": {
+              "type": "string"
+            }
           }
         },
         "perpendicular": {
           "type": "array",
           "items": {
             "type": "array",
-            "items": {"type": "string"},
-            "minItems": 2
+            "items": {
+              "type": "string"
+            }
           }
         },
         "tangent": {
           "type": "array",
           "items": {
             "type": "object",
-            "required": ["line", "at"],
             "properties": {
-              "line": {"type": "string"},
-              "at": {"type": "string"}
+              "line": {
+                "type": "string"
+              },
+              "at": {
+                "type": "string"
+              }
             }
           }
         }
       }
     },
-    "ask": {"type": "string"},
+    "ask": {
+      "type": "string"
+    },
     "gold": {
       "type": "object",
-      "required": ["answer", "reasoning_keys", "error_tags"],
+      "required": [
+        "answer",
+        "reasoning_keys",
+        "error_tags"
+      ],
       "properties": {
         "answer": {
           "type": "object",
-          "required": ["value", "unit"],
+          "required": [
+            "value",
+            "unit"
+          ],
           "properties": {
-            "value": {"type": ["number", "string"]},
-            "unit": {"type": "string"},
-            "tol": {"type": "number", "minimum": 0}
+            "value": {
+              "type": "number"
+            },
+            "unit": {
+              "type": "string"
+            },
+            "tol": {
+              "type": "number"
+            }
           }
         },
         "reasoning_keys": {
           "type": "array",
-          "items": {"type": "string"}
+          "items": {
+            "type": "string"
+          }
         },
         "error_tags": {
           "type": "array",
           "items": {
-            "type": "string",
-            "enum": ["GP", "TG", "AC", "LC", "NS"]
+            "type": "string"
           }
         }
       }

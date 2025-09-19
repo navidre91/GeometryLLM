@@ -2,11 +2,36 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Model Response",
   "type": "object",
-  "required": ["final_answer","figure_facts_used","text_givens_used","assumptions"],
+  "required": [
+    "final_answer",
+    "figure_facts_used",
+    "text_givens_used",
+    "assumptions"
+  ],
   "properties": {
-    "final_answer": {"type":"string"},
-    "figure_facts_used": {"type":"array","items":{"type":"string"}},
-    "text_givens_used": {"type":"array","items":{"type":"string"}},
-    "assumptions": {"type":"array","items":{"type":"string"}}
+    "final_answer": {
+      "type": "string"
+    },
+    "figure_facts_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "text_givens_used": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "explanation": {
+      "type": "string"
+    }
   }
 }
