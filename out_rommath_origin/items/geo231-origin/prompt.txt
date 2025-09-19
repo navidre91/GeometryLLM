@@ -1,0 +1,18 @@
+In \triangle P Q R, Z Q = 3 a - 11, Z P = a + 5, P Y = 2 c - 1, Y R = 4 c - 11, m \angle P R Z = 4 b - 17, m \angle Z R Q = 3 b - 4, m \angle Q Y R = 7 b + 6, and m \angle P X R = 2 a + 10. If Q Y is a perpendicular bisector of P R, find b.
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

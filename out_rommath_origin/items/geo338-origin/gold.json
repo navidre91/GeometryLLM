@@ -1,0 +1,13 @@
+{
+  "id": "geo338-origin",
+  "answer": "C",
+  "choices": {
+    "A": "27°",
+    "B": "34°",
+    "C": "36°",
+    "D": "54°"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

@@ -1,0 +1,16 @@
+{
+  "final_answer": "30°",
+  "figure_facts_used": [
+    "PA tangent @ A",
+    "arcAB = 110°",
+    "arcCB = 50°"
+  ],
+  "text_givens_used": [
+    "m(AB) = 110°",
+    "m(CB) = 50°"
+  ],
+  "assumptions": [
+    "none"
+  ],
+  "explanation": "External tangent-secant angle equals half the difference of the intercepted arcs, so (110°-50°)/2 = 30°."
+}

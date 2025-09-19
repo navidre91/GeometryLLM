@@ -1,0 +1,13 @@
+{
+  "id": "geo_demo_parallel_03",
+  "answer": null,
+  "choices": {
+    "A": "∠ACD",
+    "B": "∠DCA",
+    "C": "∠BCD",
+    "D": "∠CBD"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "demo"
+}

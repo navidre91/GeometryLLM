@@ -1,17 +1,19 @@
+ITEM ?= T1
+
 install:
-\tpip install -r requirements.txt
+	pip install -r requirements.txt
 
 render:
-\tpython tools/render_svg.py --scene items/T1/scene.yaml --out_dir items/T1
+	python tools/render_svg.py --scene items/$(ITEM)/scene.yaml --out_dir items/$(ITEM)
 
 variants:
-\tpython tools/make_variants.py --scene items/T1/scene.yaml --variants items/T1/T1.variants.json --out_dir items/T1
+	python tools/make_variants.py --scene items/$(ITEM)/scene.yaml --variants items/$(ITEM)/$(ITEM).variants.json --out_dir items/$(ITEM)
 
 validate:
-\tpython tools/validate_gold.py --items_dir items
+	python tools/validate_gold.py --items_dir items --schema_dir schema
 
 test:
-\tpytest -q
+	pytest -q
 
 eval:
-\tpython eval/evaluate.py --items_dir items --responses_dir runs/sample --out results.csv
+	python eval/evaluate.py --items_dir items --responses_dir runs/sample --out results.csv

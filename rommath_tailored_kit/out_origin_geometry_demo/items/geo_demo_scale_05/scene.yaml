@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "id": "geo_demo_scale_05",
+  "renderer": {
+    "type": "external-raster",
+    "uri": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/interference_introduction_2547_655.png"
+  },
+  "primitives": [],
+  "symbols": [],
+  "relations": [],
+  "metadata": {
+    "subset": "origin",
+    "split": "demo",
+    "question_type": "multiple-choice",
+    "diagnostic_hint": "not-to-scale-vs-marked"
+  }
+}

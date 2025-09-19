@@ -1,0 +1,39 @@
+[
+  {
+    "variant_id": "T3_full_txtimg",
+    "text_included": true,
+    "image": "T3.svg"
+  },
+  {
+    "variant_id": "T3_img_only",
+    "text_included": false,
+    "image": "T3.svg"
+  },
+  {
+    "variant_id": "T3_txt_only",
+    "text_included": true,
+    "image": null
+  },
+  {
+    "variant_id": "T3_adversarial",
+    "text_included": true,
+    "image": "T3_adversarial.svg",
+    "render_ops": [
+      "rotate10",
+      "thin_symbols"
+    ]
+  },
+  {
+    "variant_id": "T3_mark_removed",
+    "text_included": true,
+    "image": "T3_no_tAB.svg",
+    "mark_removed": [
+      "tAB"
+    ],
+    "text_drop": [
+      "m(AB) = 110°"
+    ],
+    "expected_effect": "flip_or_invalidate",
+    "decisive_symbol": "tAB"
+  }
+]

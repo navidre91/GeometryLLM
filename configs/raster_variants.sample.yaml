@@ -1,0 +1,24 @@
+# Example configuration for tools/make_raster_variants.py
+# Coordinates are pixel-based in the base image reference frame.
+items:
+  - id: geo697-origin
+    base_image: assets/figure.png            # relative to the item directory
+    output_image: assets/figure_no_arc.png   # where the altered image will be written
+    variant:
+      variant_id: geo697-origin_mark_removed
+      text_included: true
+      image: assets/figure_no_arc.png
+      expected_effect: flip_or_invalidate
+      decisive_symbol: arc_label_110
+      text_drop:
+        - "m(AB) = 110°"
+    operations:
+      - type: erase_rect
+        bbox: [405, 165, 470, 225]
+        color: [255, 255, 255, 255]
+      - type: add_text
+        text: "??"
+        position: [415, 175]
+        fill: [0, 0, 0, 255]
+        font_size: 18
+        note: "Placeholder text prompting manual replacement."

@@ -1,0 +1,13 @@
+{
+  "id": "geo655-origin",
+  "answer": "B",
+  "choices": {
+    "A": "3cm",
+    "B": "4cm",
+    "C": "5cm",
+    "D": "6cm"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

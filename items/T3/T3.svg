@@ -1,0 +1,38 @@
+<svg id="scene" xmlns="http://www.w3.org/2000/svg" width="460" height="460" viewBox="0 0 460 460">
+  <defs>
+    <style><![CDATA[
+      .prim { fill: none; stroke: black; stroke-width: 2; }
+      .sym  { fill: none; stroke: black; stroke-width: 2; }
+      .lbl  { font-family: Arial, sans-serif; font-size: 14px; }
+      .measure { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+      .pt   { fill: black; }
+    ]]></style>
+  </defs>
+  <g id="primitives">
+    <circle id="circleO" class="prim" cx="200.0" cy="200.0" r="140" />
+    <line id="PA" class="prim" x1="360.0" y1="120.0" x2="320.0" y2="200.0" />
+    <line id="PCB" class="prim" x1="360.0" y1="120.0" x2="260.0" y2="320.0" />
+    <line id="PB" class="prim" x1="360.0" y1="120.0" x2="110.0" y2="120.0" />
+    <line id="AB" class="prim" x1="320.0" y1="200.0" x2="110.0" y2="120.0" />
+    <line id="AC" class="prim" x1="320.0" y1="200.0" x2="260.0" y2="320.0" />
+    <path id="arcAB" class="prim" d="M 320.000 200.000 A 140.000 140.000 0 0 1 110.000 120.000" />
+    <path id="arcCB" class="prim" d="M 260.000 320.000 A 140.000 140.000 0 0 1 110.000 120.000" />
+  </g>
+  <g id="symbols" opacity="1.0">
+    <text id="tangA" class="lbl" x="330.0" y="190.0">⊥</text>
+  </g>
+  <g id="labels">
+    <circle id="pt_O" class="pt" cx="200.0" cy="200.0" r="3" />
+    <circle id="pt_A" class="pt" cx="320.0" cy="200.0" r="3" />
+    <circle id="pt_B" class="pt" cx="110.0" cy="120.0" r="3" />
+    <circle id="pt_C" class="pt" cx="260.0" cy="320.0" r="3" />
+    <circle id="pt_P" class="pt" cx="360.0" cy="120.0" r="3" />
+    <text id="tAB" class="measure" x="292.0" y="190.0">110°</text>
+    <text id="tCB" class="measure" x="232.0" y="310.0">50°</text>
+    <text id="lblA" class="lbl" x="328.0" y="192.0">A</text>
+    <text id="lblB" class="lbl" x="118.0" y="112.0">B</text>
+    <text id="lblC" class="lbl" x="268.0" y="312.0">C</text>
+    <text id="lblO" class="lbl" x="208.0" y="192.0">O</text>
+    <text id="lblP" class="lbl" x="368.0" y="112.0">P</text>
+  </g>
+</svg>

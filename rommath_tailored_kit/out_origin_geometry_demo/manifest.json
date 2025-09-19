@@ -1,0 +1,38 @@
+[
+  {
+    "id": "geo_demo_tangent_01",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_tangent_01",
+    "subset": "origin",
+    "split": "demo"
+  },
+  {
+    "id": "geo_demo_arc_02",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_arc_02",
+    "subset": "origin",
+    "split": "demo"
+  },
+  {
+    "id": "geo_demo_parallel_03",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_parallel_03",
+    "subset": "origin",
+    "split": "demo"
+  },
+  {
+    "id": "geo_demo_label_04",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_label_04",
+    "subset": "origin",
+    "split": "demo"
+  },
+  {
+    "id": "geo_demo_scale_05",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_scale_05",
+    "subset": "origin",
+    "split": "demo"
+  },
+  {
+    "id": "geo_demo_mixed_06",
+    "dir": "/mnt/data/rommath_tailored_kit/out_origin_geometry_demo/items/geo_demo_mixed_06",
+    "subset": "origin",
+    "split": "demo"
+  }
+]

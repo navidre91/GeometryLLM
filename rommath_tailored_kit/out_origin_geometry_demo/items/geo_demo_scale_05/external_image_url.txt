@@ -1,0 +1,1 @@
+https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/interference_introduction_2547_655.png

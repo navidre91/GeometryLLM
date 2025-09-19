@@ -1,0 +1,177 @@
+[
+  {
+    "id": "geo137-origin",
+    "dir": "out_rommath_origin/items/geo137-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo231-origin",
+    "dir": "out_rommath_origin/items/geo231-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo233-origin",
+    "dir": "out_rommath_origin/items/geo233-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "label-anchoring"
+  },
+  {
+    "id": "geo313-origin",
+    "dir": "out_rommath_origin/items/geo313-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo321-origin",
+    "dir": "out_rommath_origin/items/geo321-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo328-origin",
+    "dir": "out_rommath_origin/items/geo328-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "tangent-secant"
+  },
+  {
+    "id": "geo338-origin",
+    "dir": "out_rommath_origin/items/geo338-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "tangent-secant"
+  },
+  {
+    "id": "geo373-origin",
+    "dir": "out_rommath_origin/items/geo373-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo435-origin",
+    "dir": "out_rommath_origin/items/geo435-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo485-origin",
+    "dir": "out_rommath_origin/items/geo485-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "label-anchoring"
+  },
+  {
+    "id": "geo489-origin",
+    "dir": "out_rommath_origin/items/geo489-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo492-origin",
+    "dir": "out_rommath_origin/items/geo492-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo500-origin",
+    "dir": "out_rommath_origin/items/geo500-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo501-origin",
+    "dir": "out_rommath_origin/items/geo501-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo508-origin",
+    "dir": "out_rommath_origin/items/geo508-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo509-origin",
+    "dir": "out_rommath_origin/items/geo509-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  },
+  {
+    "id": "geo557-origin",
+    "dir": "out_rommath_origin/items/geo557-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "label-anchoring"
+  },
+  {
+    "id": "geo578-origin",
+    "dir": "out_rommath_origin/items/geo578-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "tangent-secant"
+  },
+  {
+    "id": "geo585-origin",
+    "dir": "out_rommath_origin/items/geo585-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "tangent-secant"
+  },
+  {
+    "id": "geo609-origin",
+    "dir": "out_rommath_origin/items/geo609-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo619-origin",
+    "dir": "out_rommath_origin/items/geo619-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo655-origin",
+    "dir": "out_rommath_origin/items/geo655-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "label-anchoring"
+  },
+  {
+    "id": "geo663-origin",
+    "dir": "out_rommath_origin/items/geo663-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo689-origin",
+    "dir": "out_rommath_origin/items/geo689-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "invented-parallel-perp"
+  },
+  {
+    "id": "geo697-origin",
+    "dir": "out_rommath_origin/items/geo697-origin",
+    "subset": "origin",
+    "split": "validation",
+    "diagnostic_category": "arc-vs-chord"
+  }
+]

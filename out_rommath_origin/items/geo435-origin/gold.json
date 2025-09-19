@@ -1,0 +1,13 @@
+{
+  "id": "geo435-origin",
+  "answer": "A",
+  "choices": {
+    "A": "40°",
+    "B": "50°",
+    "C": "25°",
+    "D": "100°"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

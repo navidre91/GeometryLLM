@@ -1,0 +1,35 @@
+[
+  {
+    "variant_id": "geo557-origin_full_txtimg",
+    "text_included": true,
+    "image": "assets/figure.png"
+  },
+  {
+    "variant_id": "geo557-origin_img_only",
+    "text_included": false,
+    "image": "assets/figure.png"
+  },
+  {
+    "variant_id": "geo557-origin_txt_only",
+    "text_included": true,
+    "image": null
+  },
+  {
+    "variant_id": "geo557-origin_rot30",
+    "text_included": true,
+    "image": "assets/figure_rot30.png",
+    "expected_effect": "no_change"
+  },
+  {
+    "variant_id": "geo557-origin_rot90",
+    "text_included": true,
+    "image": "assets/figure_rot90.png",
+    "expected_effect": "no_change"
+  },
+  {
+    "variant_id": "geo557-origin_rot180",
+    "text_included": true,
+    "image": "assets/figure_rot180.png",
+    "expected_effect": "no_change"
+  }
+]

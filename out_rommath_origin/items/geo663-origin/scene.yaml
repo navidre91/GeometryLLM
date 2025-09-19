@@ -1,0 +1,24 @@
+{
+  "version": "0.1",
+  "id": "geo663-origin",
+  "renderer": {
+    "type": "external-raster",
+    "uri": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/origin_359_663.png"
+  },
+  "primitives": [],
+  "symbols": [],
+  "relations": [],
+  "metadata": {
+    "subset": "origin",
+    "split": "validation",
+    "question_type": "multiple-choice",
+    "diagnostic_category": "invented-parallel-perp",
+    "diagnostic_scores": {
+      "tangent-secant": 0,
+      "arc-vs-chord": 0,
+      "invented-parallel-perp": 2,
+      "label-anchoring": 0,
+      "not-to-scale-vs-marked": 0
+    }
+  }
+}

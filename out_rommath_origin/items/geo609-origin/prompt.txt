@@ -1,0 +1,18 @@
+As shown in the figure, in △ABC, points D and E are on sides AB and AC respectively, and DE ∥ BC. If AD:DB = 3:2 and AE = 6, then what is the length of EC?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

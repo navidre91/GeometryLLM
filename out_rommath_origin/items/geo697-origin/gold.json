@@ -1,0 +1,13 @@
+{
+  "id": "geo697-origin",
+  "answer": "D",
+  "choices": {
+    "A": "√{7}",
+    "B": "2",
+    "C": "10",
+    "D": "5"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

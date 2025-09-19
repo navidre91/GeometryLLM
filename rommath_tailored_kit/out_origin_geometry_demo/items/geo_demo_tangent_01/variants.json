@@ -1,0 +1,17 @@
+[
+  {
+    "variant_id": "geo_demo_tangent_01_full_txtimg",
+    "text_included": true,
+    "image": "assets/figure.png"
+  },
+  {
+    "variant_id": "geo_demo_tangent_01_img_only",
+    "text_included": false,
+    "image": "assets/figure.png"
+  },
+  {
+    "variant_id": "geo_demo_tangent_01_txt_only",
+    "text_included": true,
+    "image": null
+  }
+]

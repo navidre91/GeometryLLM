@@ -1,0 +1,13 @@
+{
+  "id": "geo_demo_label_04",
+  "answer": null,
+  "choices": {
+    "(1)": "OE is a radius",
+    "(2)": "E lies on circle",
+    "(3)": "AE = EB",
+    "(4)": "OE bisects AB"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "demo"
+}

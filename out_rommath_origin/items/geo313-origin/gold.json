@@ -1,0 +1,13 @@
+{
+  "id": "geo313-origin",
+  "answer": "C",
+  "choices": {
+    "A": "1cm",
+    "B": "2cm",
+    "C": "3cm",
+    "D": "4cm"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

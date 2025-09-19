@@ -1,0 +1,6 @@
+{
+  "split_json_url": "https://huggingface.co/datasets/yilun-org/RoMMath/raw/main/validation.json",
+  "image_relpath": "./RoMMath/image/origin_313_501.png",
+  "image_url": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/origin_313_501.png",
+  "dataset": "yilun-org/RoMMath"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "id": "geo_demo_tangent_01",
+  "renderer": {
+    "type": "external-raster",
+    "uri": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/lexical_perturbation_753_697.png"
+  },
+  "primitives": [],
+  "symbols": [],
+  "relations": [],
+  "metadata": {
+    "subset": "origin",
+    "split": "demo",
+    "question_type": "open-ended",
+    "diagnostic_hint": "tangent-secant"
+  }
+}

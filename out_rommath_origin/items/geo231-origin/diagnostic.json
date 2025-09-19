@@ -1,0 +1,10 @@
+{
+  "category": "invented-parallel-perp",
+  "scores": {
+    "tangent-secant": 0,
+    "arc-vs-chord": 0,
+    "invented-parallel-perp": 2,
+    "label-anchoring": 1,
+    "not-to-scale-vs-marked": 0
+  }
+}

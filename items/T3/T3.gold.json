@@ -1,0 +1,19 @@
+{
+  "id": "T3",
+  "ask": "angle(APC)",
+  "gold": {
+    "answer": {
+      "value": 30,
+      "unit": "deg",
+      "tol": 0
+    },
+    "reasoning_keys": [
+      "external-angle = 1/2 (far arc - near arc)",
+      "tangent defines intercepted arc via chord AB"
+    ],
+    "error_tags": [
+      "TG",
+      "AC"
+    ]
+  }
+}

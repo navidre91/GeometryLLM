@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RoMMathSeedRow",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "subset": {
+      "type": "string"
+    },
+    "split": {
+      "type": "string",
+      "enum": [
+        "validation",
+        "test",
+        "demo"
+      ]
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "choices": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "question_type": {
+      "type": "string"
+    },
+    "diagnostic_hint": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "subset",
+    "split",
+    "image_url",
+    "question",
+    "question_type"
+  ]
+}

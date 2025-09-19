@@ -1,0 +1,42 @@
+points:
+  - {id: O, x: 200, y: 200}
+  - {id: A, x: 320, y: 200}
+  - {id: B, x: 110, y: 120}
+  - {id: C, x: 260, y: 320}
+  - {id: P, x: 360, y: 120}
+primitives:
+  - {type: Circle, id: circleO, center: O, radius: 140}
+  - {type: Line, id: PA, p1: P, p2: A}
+  - {type: Line, id: PCB, p1: P, p2: C}
+  - {type: Line, id: PB, p1: P, p2: B}
+  - {type: Line, id: AB, p1: A, p2: B}
+  - {type: Line, id: AC, p1: A, p2: C}
+  - {type: Arc, id: arcAB, circle: circleO, start: A, end: B, measure_deg: 110}
+  - {type: Arc, id: arcCB, circle: circleO, start: C, end: B, measure_deg: 50}
+symbols:
+  - {id: tangA, type: tangent_mark, targets: [PA, A]}
+texts:
+  - {id: tAB, string: "110°", anchor: A}
+  - {id: tCB, string: "50°", anchor: C}
+  - {id: lblA, string: A, anchor: A}
+  - {id: lblB, string: B, anchor: B}
+  - {id: lblC, string: C, anchor: C}
+  - {id: lblO, string: O, anchor: O}
+  - {id: lblP, string: P, anchor: P}
+relations:
+  - {type: sym2geo, symbol_id: tangA, target_ids: [PA, A]}
+  - {type: text2geo, text_id: tAB, target_id: arcAB}
+  - {type: text2geo, text_id: tCB, target_id: arcCB}
+givens:
+  arcs:
+    AB: 110
+    CB: 50
+  tangent:
+    - {line: PA, at: A}
+ask: angle(APC)
+gold:
+  answer: {value: 30, unit: deg, tol: 0}
+  reasoning_keys:
+    - external-angle = 1/2 (far arc - near arc)
+    - tangent defines intercepted arc via chord AB
+  error_tags: [TG, AC]

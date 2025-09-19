@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "id": "geo_demo_parallel_03",
+  "renderer": {
+    "type": "external-raster",
+    "uri": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/structure_perturbation_1347_655.png"
+  },
+  "primitives": [],
+  "symbols": [],
+  "relations": [],
+  "metadata": {
+    "subset": "origin",
+    "split": "demo",
+    "question_type": "multiple-choice",
+    "diagnostic_hint": "invented-parallel-perp"
+  }
+}

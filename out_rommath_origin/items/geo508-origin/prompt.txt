@@ -1,0 +1,18 @@
+As shown in the figure, AB is the diameter of circle O, and chord CD is perpendicular to AB at point E. Given that ∠CDB = 30° and the radius of circle O is 6, what is the length of the distance OE from the center O to chord CD?
+
+Instructions:
+- Do NOT assume figures are to scale.
+- Use ONLY marks visible in the diagram unless explicitly stated in the text.
+- Follow the output contract below exactly.
+
+RESPONSE FORMAT (mandatory):
+FINAL_ANSWER: <value + unit>
+
+FIGURE_FACTS_USED:
+- <...>
+
+TEXT_GIVENS_USED:
+- <...>
+
+ASSUMPTIONS:
+- none

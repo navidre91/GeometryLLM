@@ -1,0 +1,1 @@
+https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/origin_366_689.png

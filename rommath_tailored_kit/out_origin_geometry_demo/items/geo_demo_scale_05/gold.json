@@ -1,0 +1,13 @@
+{
+  "id": "geo_demo_scale_05",
+  "answer": "Yes",
+  "choices": {
+    "A": "Yes",
+    "B": "No",
+    "C": "Cannot determine",
+    "D": "Only if AB=BC"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "demo"
+}

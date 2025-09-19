@@ -1,0 +1,13 @@
+{
+  "id": "geo619-origin",
+  "answer": "A",
+  "choices": {
+    "A": "2",
+    "B": "4",
+    "C": "6",
+    "D": "8"
+  },
+  "question_type": "multiple-choice",
+  "subset": "origin",
+  "split": "validation"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "id": "geo_demo_label_04",
+  "renderer": {
+    "type": "external-raster",
+    "uri": "https://huggingface.co/datasets/yilun-org/RoMMath/resolve/main/image/semantic_complexification_1953_697.png"
+  },
+  "primitives": [],
+  "symbols": [],
+  "relations": [],
+  "metadata": {
+    "subset": "origin",
+    "split": "demo",
+    "question_type": "multiple-choice",
+    "diagnostic_hint": "label-anchoring"
+  }
+}

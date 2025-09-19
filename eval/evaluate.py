@@ -23,17 +23,35 @@ def parse_number(s):
 
 def normalize_fact(s: str) -> str:
     t = s.strip().lower()
+    t = t.replace(",", " ")
+    t = t.replace("∠", "angle ")
     t = t.replace("perpendicular", "⊥").replace("right angle", "⊥")
     t = t.replace("parallel", "∥")
-    t = t.replace("tangent at", "tangent@").replace("tangent to", "tangent@")
-    t = re.sub(r"\s+", " ", t)
-    t = t.replace("∠", "angle ").replace("°", "°")
-    t = t.replace(",", "")
+    # collapse angle tokens like "angle a b c" -> "angle abc"
+    t = re.sub(r"angle\s+([a-z])\s+([a-z])\s+([a-z])", lambda m: f"angle {''.join(m.groups())}", t)
+    t = re.sub(r"angle\s+([a-z]{3})", lambda m: f"angle {m.group(1)}", t)
+    # normalize tangent references (with or without spaces around '@')
+    t = re.sub(r"tangent\s*(?:at|to|@)\s*", "tangent@", t)
+    t = re.sub(r"\s*@\s*", "@", t)
+    # normalize perpendicular-at-point expressions
+    t = re.sub(r"⊥\s*at\s*([a-z0-9]+)", lambda m: f"⊥@{m.group(1)}", t)
+    # align degree expressions so "= 20" and "= 20°" match
+    t = re.sub(r"=\s*(-?\d+(?:\.\d+)?)\s*°", r"= \1", t)
+    t = t.replace("°", "")
+    t = re.sub(r"\s+", " ", t).strip()
     return t
 
 def truth_facts_from_pgdp(pgdp: dict) -> set[str]:
     facts = set()
     sym_map = {s["id"]: s for s in pgdp.get("symbols",[])}
+    line_map = {line["id"]: line for line in pgdp.get("lines", [])}
+
+    def line_points(line_id: str) -> set[str]:
+        line = line_map.get(line_id)
+        if not line:
+            return set()
+        return {line.get("p1"), line.get("p2")}
+
     for rel in pgdp.get("relations",[]):
         if rel.get("type")=="sym2geo":
             sid = rel["symbol_id"]; s = sym_map.get(sid,{})
@@ -42,6 +60,11 @@ def truth_facts_from_pgdp(pgdp: dict) -> set[str]:
                 l1,l2 = rel["target_ids"][0], rel["target_ids"][1]
                 facts.add(normalize_fact(f"{l1} ⊥ {l2}"))
                 facts.add(normalize_fact(f"{l2} ⊥ {l1}"))
+                intersection = line_points(l1) & line_points(l2)
+                for point in intersection:
+                    if point:
+                        facts.add(normalize_fact(f"right angle at {point}"))
+                        facts.add(normalize_fact(f"⊥ at {point}"))
             elif st=="parallel":
                 l1,l2 = rel["target_ids"][0], rel["target_ids"][1]
                 facts.add(normalize_fact(f"{l1} ∥ {l2}"))
@@ -51,11 +74,12 @@ def truth_facts_from_pgdp(pgdp: dict) -> set[str]:
                 facts.add(normalize_fact(f"{line} tangent@ {pt}"))
     text2geo = {r["text_id"]: r["target_id"] for r in pgdp.get("relations",[]) if r.get("type")=="text2geo"}
     for txt in pgdp.get("texts",[]):
-        if "°" in txt.get("string",""):
-            tid = txt["id"]; ang = txt["string"]
+        content = txt.get("string", "")
+        if "°" in content or re.search(r"=\s*-?\d+(?:\.\d+)?", content):
+            tid = txt["id"]
             target = text2geo.get(tid)
             if target:
-                facts.add(normalize_fact(f"{target} = {ang}"))
+                facts.add(normalize_fact(f"{target} = {content}"))
     return facts
 
 def grounding_prf(used: list[str], truth: set[str]):
@@ -128,6 +152,7 @@ def main():
         pgdp = load_json(item_dir / f"{item_id}.pgdp.json")
         variants = load_json(item_dir / f"{item_id}.variants.json")
         preds = {}
+        metrics = {}
         for v in variants:
             vid = v["variant_id"]
             resp_path = Path(args.responses_dir) / f"{vid}.json"
@@ -139,13 +164,44 @@ def main():
                 "P": f'{res.get("P",0):.3f}', "R": f'{res.get("R",0):.3f}', "F1": f'{res.get("F1",0):.3f}',
                 "flags": res.get("flags","")
             })
-            if res.get("exists"): preds[vid] = res.get("pred")
+            if res.get("exists"):
+                preds[vid] = res.get("pred")
+                metrics[vid] = res
         base_vid = next((v["variant_id"] for v in variants if v["variant_id"].endswith("full_txtimg")), None)
         mr_vid   = next((v["variant_id"] for v in variants if v["variant_id"].endswith("mark_removed")), None)
         if base_vid and mr_vid and base_vid in preds and mr_vid in preds:
             consistent = int(preds[base_vid] != preds[mr_vid])
             rows.append({"item": item_id, "variant": "contrastive_check",
                          "exists": 1, "acc": consistent, "P":"", "R":"", "F1":"", "flags": "CONSISTENCY"})
+
+        def acc_for(vid: str):
+            res = metrics.get(vid)
+            return res.get("acc") if res else None
+
+        img_vid = next((v["variant_id"] for v in variants if v["variant_id"].endswith("img_only")), None)
+        txt_vid = next((v["variant_id"] for v in variants if v["variant_id"].endswith("txt_only")), None)
+
+        base_acc = acc_for(base_vid) if base_vid else None
+        img_acc = acc_for(img_vid) if img_vid else None
+        txt_acc = acc_for(txt_vid) if txt_vid else None
+
+        delta_img = (img_acc - base_acc) if (base_acc is not None and img_acc is not None) else None
+        delta_txt = (txt_acc - base_acc) if (base_acc is not None and txt_acc is not None) else None
+
+        delta_img_str = f"{delta_img:+d}" if isinstance(delta_img, int) else (f"{delta_img:+.2f}" if isinstance(delta_img, float) and delta_img is not None else "")
+        delta_txt_str = f"{delta_txt:+d}" if isinstance(delta_txt, int) else (f"{delta_txt:+.2f}" if isinstance(delta_txt, float) and delta_txt is not None else "")
+
+        sensitivity_exists = 1 if base_acc is not None else 0
+        rows.append({
+            "item": item_id,
+            "variant": "variant_sensitivity",
+            "exists": sensitivity_exists,
+            "acc": "",
+            "P": delta_img_str,
+            "R": delta_txt_str,
+            "F1": "",
+            "flags": "SENSITIVITY"
+        })
 
     outp = Path(args.out); outp.parent.mkdir(parents=True, exist_ok=True)
     with open(outp, "w", encoding="utf-8") as f:

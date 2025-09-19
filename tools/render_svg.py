@@ -133,20 +133,36 @@ def draw_symbol_perpendicular(scene, sym):
     return f'    <rect id="{sym["id"]}" class="sym" x="{x:.1f}" y="{y:.1f}" width="{sz:.1f}" height="{sz:.1f}" />'
 
 def draw_symbol_parallel(scene, sym):
-    def chevrons_for_line(scene, line_id, sym_id_suffix):
-        (p1,p2) = find_line_pts(scene, line_id)
-        dx,dy = (p2[0]-p1[0], p2[1]-p1[1])
-        ux,uy = unit_vec(dx,dy); nx,ny = unit_vec(*perp_vec(dx,dy))
-        midx = p1[0] + 0.3*dx; midy = p1[1] + 0.3*dy
-        L = 10.0
+    def chevrons_for_line(line_id, sym_id_suffix):
+        pts = find_line_pts(scene, line_id)
+        if not pts:
+            return ""
+        (p1, p2) = pts
+        dx, dy = (p2[0] - p1[0], p2[1] - p1[1])
+        ux, uy = unit_vec(dx, dy)
+        nx, ny = unit_vec(*perp_vec(dx, dy))
+        midx = (p1[0] + p2[0]) / 2
+        midy = (p1[1] + p2[1]) / 2
+        length = 10.0
         parts = []
-        for i in (-1,1):
-            ax = midx + nx*i*5; ay = midy + ny*i*5
-            bx = ax + ux*L;     by = ay + uy*L
-            parts.append(f'    <line id="{sym_id_suffix}_{i}" class="sym" x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" />')
+        for i in (-1, 1):
+            ax = midx + nx * i * 5
+            ay = midy + ny * i * 5
+            bx = ax + ux * length
+            by = ay + uy * length
+            parts.append(
+                f'    <line id="{sym_id_suffix}_{i}" class="sym" x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" />'
+            )
         return "\n".join(parts)
-    l1, l2 = sym["targets"][0], sym["targets"][1]
-    return chevrons_for_line(scene, l1, sym["id"]+"_l1") + "\n" + chevrons_for_line(scene, l2, sym["id"]+"_l2")
+
+    lines = sym.get("targets", [])
+    parts = []
+    for idx, line_id in enumerate(lines):
+        suffix = f"{sym['id']}_{idx}"
+        chunk = chevrons_for_line(line_id, suffix)
+        if chunk:
+            parts.append(chunk)
+    return "\n".join(parts)
 
 def draw_symbol_tangent(scene, sym):
     line_id, point_id = sym["targets"][0], sym["targets"][1]
@@ -186,15 +202,22 @@ def draw_labels(scene):
     parts = ['  <g id="labels">']
     for pid, (x,y) in pts.items():
         parts.append(f'    <circle id="pt_{pid}" class="pt" cx="{x:.1f}" cy="{y:.1f}" r="3" />')
-    for txt in scene.get("texts",[]):
-        t = txt["string"]
-        anchor = txt["anchor"]
-        dx,dy = (0,0)
-        if "offset" in txt and isinstance(txt["offset"], list) and len(txt["offset"])>=2:
-            dx,dy = txt["offset"][:2]
-        x,y = pts[anchor]
-        klass = "measure" if re.search(r"\d+\s*°", t) else "lbl"
-        parts.append(f'    <text id="{txt["id"]}" class="{klass}" x="{x+dx:.1f}" y="{y+dy:.1f}">{t}</text>')
+    for txt in scene.get("texts", []):
+        anchor = txt.get("anchor")
+        if anchor not in pts:
+            continue
+        x, y = pts[anchor]
+        content = txt["string"]
+        klass = "measure" if re.search(r"\d+\s*°", content) else "lbl"
+        base_dx, base_dy = (-28.0, -10.0) if klass == "measure" else (8.0, -8.0)
+        offset = txt.get("offset", [0.0, 0.0])
+        if not (isinstance(offset, list) and len(offset) >= 2):
+            offset = [0.0, 0.0]
+        dx = base_dx + offset[0]
+        dy = base_dy + offset[1]
+        parts.append(
+            f'    <text id="{txt["id"]}" class="{klass}" x="{x+dx:.1f}" y="{y+dy:.1f}">{content}</text>'
+        )
     parts.append('  </g>')
     return "\n".join(parts)+"\n"
 
