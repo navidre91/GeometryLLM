@@ -1,0 +1,1717 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  19 SEP 2025 01:11
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**docs/rommath_origin_showcase.tex
+(./docs/rommath_origin_showcase.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen142
+))
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count270
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count271
+\leftroot@=\count272
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count273
+\DOTSCASE@=\count274
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count275
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count276
+\dotsspace@=\muskip17
+\c@parentequation=\count277
+\dspbrk@lvl=\count278
+\tag@help=\toks18
+\row@=\count279
+\column@=\count280
+\maxfields@=\count281
+\andhelp@=\toks19
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks20
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen151
+\Gin@req@width=\dimen152
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/usr/local/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen153
+\Gm@wd@mp=\dimen154
+\Gm@odd@mp=\dimen155
+\Gm@even@mp=\dimen156
+\Gm@layoutwidth=\dimen157
+\Gm@layoutheight=\dimen158
+\Gm@layouthoffset=\dimen159
+\Gm@layoutvoffset=\dimen160
+\Gm@dimlist=\toks23
+)
+(/usr/local/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count285
+\l__pdf_internal_box=\box54
+)
+(./rommath_origin_showcase.aux)
+\openout1 = `rommath_origin_showcase.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+
+(/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count286
+\scratchdimen=\dimen161
+\scratchbox=\box55
+\nofMPsegments=\count287
+\nofMParguments=\count288
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count289
+\MPscratchDim=\dimen162
+\MPnumerator=\count290
+\makeMPintoPDFobject=\count291
+\everyMPtoPDFconversion=\toks25
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(65.04256pt, 484.20988pt, 65.04256pt)
+* v-part:(T,H,B)=(65.04256pt, 664.88487pt, 65.04256pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=484.20988pt
+* \textheight=664.88487pt
+* \oddsidemargin=-7.22743pt
+* \evensidemargin=-7.22743pt
+* \topmargin=-44.22743pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--19
+
+ []
+
+<out_rommath_origin/items/geo1021-origin/assets/figure.png, id=1, 122.4575pt x 
+144.54pt>
+File: out_rommath_origin/items/geo1021-origin/assets/figure.png Graphic file (t
+ype png)
+<use out_rommath_origin/items/geo1021-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo1021-origin/assets/figure.
+png  used on input line 23.
+(pdftex.def)             Requested size: 147.20268pt x 173.75146pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
+
+ []
+
+<out_rommath_origin/items/geo1025-origin/assets/figure.png, id=2, 82.3075pt x 1
+04.39pt>
+File: out_rommath_origin/items/geo1025-origin/assets/figure.png Graphic file (t
+ype png)
+<use out_rommath_origin/items/geo1025-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo1025-origin/assets/figure.
+png  used on input line 40.
+(pdftex.def)             Requested size: 147.20268pt x 186.71832pt.
+
+
+[1
+
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./out_r
+ommath_origin/items/geo1021-origin/assets/figure.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 48--53
+
+ []
+
+<out_rommath_origin/items/geo1045-origin/assets/figure.png, id=13, 122.4575pt x
+ 87.32625pt>
+File: out_rommath_origin/items/geo1045-origin/assets/figure.png Graphic file (t
+ype png)
+<use out_rommath_origin/items/geo1045-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo1045-origin/assets/figure.
+png  used on input line 57.
+(pdftex.def)             Requested size: 147.20268pt x 104.97485pt.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 6
+5.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 65.
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--70
+
+ []
+
+<out_rommath_origin/items/geo137-origin/assets/figure.png, id=14, 543.02875pt x
+ 329.23pt>
+File: out_rommath_origin/items/geo137-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo137-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo137-origin/assets/figure.p
+ng  used on input line 74.
+(pdftex.def)             Requested size: 147.20268pt x 89.24493pt.
+<out_rommath_origin/items/geo137-origin/assets/figure_rot30.png, id=16, 543.028
+75pt x 329.23pt>
+File: out_rommath_origin/items/geo137-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo137-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo137-origin/assets/figure_r
+ot30.png  used on input line 78.
+(pdftex.def)             Requested size: 147.20268pt x 89.24493pt.
+<out_rommath_origin/items/geo137-origin/assets/figure_rot90.png, id=17, 543.028
+75pt x 329.23pt>
+File: out_rommath_origin/items/geo137-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo137-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo137-origin/assets/figure_r
+ot90.png  used on input line 82.
+(pdftex.def)             Requested size: 147.20268pt x 89.24493pt.
+
+
+[2 <./out_rommath_origin/items/geo1025-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo1045-origin/assets/figure.png (PNG copy)>]
+<out_rommath_origin/items/geo137-origin/assets/figure_rot180.png, id=21, 543.02
+875pt x 329.23pt>
+File: out_rommath_origin/items/geo137-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo137-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo137-origin/assets/figure_r
+ot180.png  used on input line 87.
+(pdftex.def)             Requested size: 147.20268pt x 89.24493pt.
+<out_rommath_origin/items/geo137-origin/assets/figure_circle.png, id=22, 543.02
+875pt x 329.23pt>
+File: out_rommath_origin/items/geo137-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo137-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo137-origin/assets/figure_c
+ircle.png  used on input line 91.
+(pdftex.def)             Requested size: 147.20268pt x 89.24493pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--104
+
+ []
+
+<out_rommath_origin/items/geo231-origin/assets/figure.png, id=23, 275.0275pt x 
+352.31625pt>
+File: out_rommath_origin/items/geo231-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo231-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo231-origin/assets/figure.p
+ng  used on input line 108.
+(pdftex.def)             Requested size: 147.20268pt x 188.57603pt.
+<out_rommath_origin/items/geo231-origin/assets/figure_rot30.png, id=24, 275.027
+5pt x 352.31625pt>
+File: out_rommath_origin/items/geo231-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo231-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo231-origin/assets/figure_r
+ot30.png  used on input line 112.
+(pdftex.def)             Requested size: 147.20268pt x 188.57603pt.
+<out_rommath_origin/items/geo231-origin/assets/figure_rot90.png, id=25, 275.027
+5pt x 352.31625pt>
+File: out_rommath_origin/items/geo231-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo231-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo231-origin/assets/figure_r
+ot90.png  used on input line 116.
+(pdftex.def)             Requested size: 147.20268pt x 188.57603pt.
+<out_rommath_origin/items/geo231-origin/assets/figure_rot180.png, id=26, 275.02
+75pt x 352.31625pt>
+File: out_rommath_origin/items/geo231-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo231-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo231-origin/assets/figure_r
+ot180.png  used on input line 121.
+(pdftex.def)             Requested size: 147.20268pt x 188.57603pt.
+<out_rommath_origin/items/geo231-origin/assets/figure_circle.png, id=27, 275.02
+75pt x 352.31625pt>
+File: out_rommath_origin/items/geo231-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo231-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo231-origin/assets/figure_c
+ircle.png  used on input line 125.
+(pdftex.def)             Requested size: 147.20268pt x 188.57603pt.
+
+
+[3 <./out_rommath_origin/items/geo137-origin/assets/figure.png> <./out_rommath_
+origin/items/geo137-origin/assets/figure_rot30.png> <./out_rommath_origin/items
+/geo137-origin/assets/figure_rot90.png> <./out_rommath_origin/items/geo137-orig
+in/assets/figure_rot180.png> <./out_rommath_origin/items/geo137-origin/assets/f
+igure_circle.png> <./out_rommath_origin/items/geo231-origin/assets/figure.png> 
+<./out_rommath_origin/items/geo231-origin/assets/figure_rot30.png> <./out_romma
+th_origin/items/geo231-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 133--138
+
+ []
+
+<out_rommath_origin/items/geo233-origin/assets/figure.png, id=39, 303.1325pt x 
+313.17pt>
+File: out_rommath_origin/items/geo233-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo233-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo233-origin/assets/figure.p
+ng  used on input line 142.
+(pdftex.def)             Requested size: 147.20268pt x 152.0784pt.
+<out_rommath_origin/items/geo233-origin/assets/figure_rot30.png, id=40, 303.132
+5pt x 313.17pt>
+File: out_rommath_origin/items/geo233-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo233-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo233-origin/assets/figure_r
+ot30.png  used on input line 146.
+(pdftex.def)             Requested size: 147.20268pt x 152.0784pt.
+<out_rommath_origin/items/geo233-origin/assets/figure_rot90.png, id=41, 303.132
+5pt x 313.17pt>
+File: out_rommath_origin/items/geo233-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo233-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo233-origin/assets/figure_r
+ot90.png  used on input line 150.
+(pdftex.def)             Requested size: 147.20268pt x 152.0784pt.
+<out_rommath_origin/items/geo233-origin/assets/figure_rot180.png, id=42, 303.13
+25pt x 313.17pt>
+File: out_rommath_origin/items/geo233-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo233-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo233-origin/assets/figure_r
+ot180.png  used on input line 155.
+(pdftex.def)             Requested size: 147.20268pt x 152.0784pt.
+<out_rommath_origin/items/geo233-origin/assets/figure_circle.png, id=43, 303.13
+25pt x 313.17pt>
+File: out_rommath_origin/items/geo233-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo233-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo233-origin/assets/figure_c
+ircle.png  used on input line 159.
+(pdftex.def)             Requested size: 147.20268pt x 152.0784pt.
+
+
+[4 <./out_rommath_origin/items/geo231-origin/assets/figure_rot180.png> <./out_r
+ommath_origin/items/geo231-origin/assets/figure_circle.png> <./out_rommath_orig
+in/items/geo233-origin/assets/figure.png> <./out_rommath_origin/items/geo233-or
+igin/assets/figure_rot30.png> <./out_rommath_origin/items/geo233-origin/assets/
+figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 167--172
+
+ []
+
+<out_rommath_origin/items/geo313-origin/assets/figure.png, id=52, 169.63374pt x
+ 143.53625pt>
+File: out_rommath_origin/items/geo313-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo313-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo313-origin/assets/figure.p
+ng  used on input line 176.
+(pdftex.def)             Requested size: 147.20268pt x 124.56013pt.
+<out_rommath_origin/items/geo313-origin/assets/figure_rot30.png, id=53, 169.633
+74pt x 143.53625pt>
+File: out_rommath_origin/items/geo313-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo313-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo313-origin/assets/figure_r
+ot30.png  used on input line 180.
+(pdftex.def)             Requested size: 147.20268pt x 124.56013pt.
+<out_rommath_origin/items/geo313-origin/assets/figure_rot90.png, id=54, 169.633
+74pt x 143.53625pt>
+File: out_rommath_origin/items/geo313-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo313-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo313-origin/assets/figure_r
+ot90.png  used on input line 184.
+(pdftex.def)             Requested size: 147.20268pt x 124.56013pt.
+<out_rommath_origin/items/geo313-origin/assets/figure_rot180.png, id=55, 169.63
+374pt x 143.53625pt>
+File: out_rommath_origin/items/geo313-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo313-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo313-origin/assets/figure_r
+ot180.png  used on input line 189.
+(pdftex.def)             Requested size: 147.20268pt x 124.56013pt.
+<out_rommath_origin/items/geo313-origin/assets/figure_circle.png, id=56, 169.63
+374pt x 143.53625pt>
+File: out_rommath_origin/items/geo313-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo313-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo313-origin/assets/figure_c
+ircle.png  used on input line 193.
+(pdftex.def)             Requested size: 147.20268pt x 124.56013pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--206
+
+ []
+
+
+
+[5 <./out_rommath_origin/items/geo233-origin/assets/figure_rot180.png> <./out_r
+ommath_origin/items/geo233-origin/assets/figure_circle.png> <./out_rommath_orig
+in/items/geo313-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/item
+s/geo313-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo313-ori
+gin/assets/figure_rot90.png> <./out_rommath_origin/items/geo313-origin/assets/f
+igure_rot180.png> <./out_rommath_origin/items/geo313-origin/assets/figure_circl
+e.png>]
+<out_rommath_origin/items/geo321-origin/assets/figure.png, id=66, 144.54pt x 82
+.3075pt>
+File: out_rommath_origin/items/geo321-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo321-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo321-origin/assets/figure.p
+ng  used on input line 210.
+(pdftex.def)             Requested size: 147.20268pt x 83.82819pt.
+<out_rommath_origin/items/geo321-origin/assets/figure_rot30.png, id=67, 144.54p
+t x 82.3075pt>
+File: out_rommath_origin/items/geo321-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo321-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo321-origin/assets/figure_r
+ot30.png  used on input line 214.
+(pdftex.def)             Requested size: 147.20268pt x 83.82819pt.
+<out_rommath_origin/items/geo321-origin/assets/figure_rot90.png, id=68, 144.54p
+t x 82.3075pt>
+File: out_rommath_origin/items/geo321-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo321-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo321-origin/assets/figure_r
+ot90.png  used on input line 218.
+(pdftex.def)             Requested size: 147.20268pt x 83.82819pt.
+<out_rommath_origin/items/geo321-origin/assets/figure_rot180.png, id=69, 144.54
+pt x 82.3075pt>
+File: out_rommath_origin/items/geo321-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo321-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo321-origin/assets/figure_r
+ot180.png  used on input line 223.
+(pdftex.def)             Requested size: 147.20268pt x 83.82819pt.
+<out_rommath_origin/items/geo321-origin/assets/figure_circle.png, id=70, 144.54
+pt x 82.3075pt>
+File: out_rommath_origin/items/geo321-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo321-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo321-origin/assets/figure_c
+ircle.png  used on input line 227.
+(pdftex.def)             Requested size: 147.20268pt x 83.82819pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--240
+
+ []
+
+<out_rommath_origin/items/geo328-origin/assets/figure.png, id=71, 160.6pt x 106
+.3975pt>
+File: out_rommath_origin/items/geo328-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo328-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo328-origin/assets/figure.p
+ng  used on input line 244.
+(pdftex.def)             Requested size: 147.20268pt x 97.52484pt.
+<out_rommath_origin/items/geo328-origin/assets/figure_rot30.png, id=72, 160.6pt
+ x 106.3975pt>
+File: out_rommath_origin/items/geo328-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo328-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo328-origin/assets/figure_r
+ot30.png  used on input line 248.
+(pdftex.def)             Requested size: 147.20268pt x 97.52484pt.
+<out_rommath_origin/items/geo328-origin/assets/figure_rot90.png, id=73, 160.6pt
+ x 106.3975pt>
+File: out_rommath_origin/items/geo328-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo328-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo328-origin/assets/figure_r
+ot90.png  used on input line 252.
+(pdftex.def)             Requested size: 147.20268pt x 97.52484pt.
+<out_rommath_origin/items/geo328-origin/assets/figure_rot180.png, id=74, 160.6p
+t x 106.3975pt>
+File: out_rommath_origin/items/geo328-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo328-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo328-origin/assets/figure_r
+ot180.png  used on input line 257.
+(pdftex.def)             Requested size: 147.20268pt x 97.52484pt.
+<out_rommath_origin/items/geo328-origin/assets/figure_circle.png, id=75, 160.6p
+t x 106.3975pt>
+File: out_rommath_origin/items/geo328-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo328-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo328-origin/assets/figure_c
+ircle.png  used on input line 261.
+(pdftex.def)             Requested size: 147.20268pt x 97.52484pt.
+
+
+[6 <./out_rommath_origin/items/geo321-origin/assets/figure.png (PNG copy)> <./o
+ut_rommath_origin/items/geo321-origin/assets/figure_rot30.png> <./out_rommath_o
+rigin/items/geo321-origin/assets/figure_rot90.png> <./out_rommath_origin/items/
+geo321-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo321-orig
+in/assets/figure_circle.png> <./out_rommath_origin/items/geo328-origin/assets/f
+igure.png (PNG copy)> <./out_rommath_origin/items/geo328-origin/assets/figure_r
+ot30.png> <./out_rommath_origin/items/geo328-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 269--274
+
+ []
+
+<out_rommath_origin/items/geo338-origin/assets/figure.png, id=85, 122.4575pt x 
+89.33376pt>
+File: out_rommath_origin/items/geo338-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo338-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo338-origin/assets/figure.p
+ng  used on input line 278.
+(pdftex.def)             Requested size: 147.20268pt x 107.38806pt.
+<out_rommath_origin/items/geo338-origin/assets/figure_rot30.png, id=86, 122.457
+5pt x 89.33376pt>
+File: out_rommath_origin/items/geo338-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo338-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo338-origin/assets/figure_r
+ot30.png  used on input line 282.
+(pdftex.def)             Requested size: 147.20268pt x 107.38806pt.
+<out_rommath_origin/items/geo338-origin/assets/figure_rot90.png, id=87, 122.457
+5pt x 89.33376pt>
+File: out_rommath_origin/items/geo338-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo338-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo338-origin/assets/figure_r
+ot90.png  used on input line 286.
+(pdftex.def)             Requested size: 147.20268pt x 107.38806pt.
+<out_rommath_origin/items/geo338-origin/assets/figure_rot180.png, id=88, 122.45
+75pt x 89.33376pt>
+File: out_rommath_origin/items/geo338-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo338-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo338-origin/assets/figure_r
+ot180.png  used on input line 291.
+(pdftex.def)             Requested size: 147.20268pt x 107.38806pt.
+<out_rommath_origin/items/geo338-origin/assets/figure_circle.png, id=89, 122.45
+75pt x 89.33376pt>
+File: out_rommath_origin/items/geo338-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo338-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo338-origin/assets/figure_c
+ircle.png  used on input line 295.
+(pdftex.def)             Requested size: 147.20268pt x 107.38806pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 303--308
+
+ []
+
+<out_rommath_origin/items/geo373-origin/assets/figure.png, id=90, 122.4575pt x 
+130.4875pt>
+File: out_rommath_origin/items/geo373-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo373-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo373-origin/assets/figure.p
+ng  used on input line 312.
+(pdftex.def)             Requested size: 147.20268pt x 156.85896pt.
+<out_rommath_origin/items/geo373-origin/assets/figure_rot30.png, id=91, 122.457
+5pt x 130.4875pt>
+File: out_rommath_origin/items/geo373-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo373-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo373-origin/assets/figure_r
+ot30.png  used on input line 316.
+(pdftex.def)             Requested size: 147.20268pt x 156.85896pt.
+<out_rommath_origin/items/geo373-origin/assets/figure_rot90.png, id=92, 122.457
+5pt x 130.4875pt>
+File: out_rommath_origin/items/geo373-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo373-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo373-origin/assets/figure_r
+ot90.png  used on input line 320.
+(pdftex.def)             Requested size: 147.20268pt x 156.85896pt.
+
+
+[7 <./out_rommath_origin/items/geo328-origin/assets/figure_rot180.png> <./out_r
+ommath_origin/items/geo328-origin/assets/figure_circle.png> <./out_rommath_orig
+in/items/geo338-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/item
+s/geo338-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo338-ori
+gin/assets/figure_rot90.png> <./out_rommath_origin/items/geo338-origin/assets/f
+igure_rot180.png> <./out_rommath_origin/items/geo338-origin/assets/figure_circl
+e.png>]
+<out_rommath_origin/items/geo373-origin/assets/figure_rot180.png, id=103, 122.4
+575pt x 130.4875pt>
+File: out_rommath_origin/items/geo373-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo373-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo373-origin/assets/figure_r
+ot180.png  used on input line 325.
+(pdftex.def)             Requested size: 147.20268pt x 156.85896pt.
+<out_rommath_origin/items/geo373-origin/assets/figure_circle.png, id=104, 122.4
+575pt x 130.4875pt>
+File: out_rommath_origin/items/geo373-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo373-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo373-origin/assets/figure_c
+ircle.png  used on input line 329.
+(pdftex.def)             Requested size: 147.20268pt x 156.85896pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--342
+
+ []
+
+<out_rommath_origin/items/geo435-origin/assets/figure.png, id=105, 113.42375pt 
+x 103.38625pt>
+File: out_rommath_origin/items/geo435-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo435-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo435-origin/assets/figure.p
+ng  used on input line 346.
+(pdftex.def)             Requested size: 147.20268pt x 134.1765pt.
+<out_rommath_origin/items/geo435-origin/assets/figure_rot30.png, id=106, 113.42
+375pt x 103.38625pt>
+File: out_rommath_origin/items/geo435-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo435-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo435-origin/assets/figure_r
+ot30.png  used on input line 350.
+(pdftex.def)             Requested size: 147.20268pt x 134.1765pt.
+<out_rommath_origin/items/geo435-origin/assets/figure_rot90.png, id=107, 113.42
+375pt x 103.38625pt>
+File: out_rommath_origin/items/geo435-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo435-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo435-origin/assets/figure_r
+ot90.png  used on input line 354.
+(pdftex.def)             Requested size: 147.20268pt x 134.1765pt.
+<out_rommath_origin/items/geo435-origin/assets/figure_rot180.png, id=108, 113.4
+2375pt x 103.38625pt>
+File: out_rommath_origin/items/geo435-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo435-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo435-origin/assets/figure_r
+ot180.png  used on input line 359.
+(pdftex.def)             Requested size: 147.20268pt x 134.1765pt.
+<out_rommath_origin/items/geo435-origin/assets/figure_circle.png, id=109, 113.4
+2375pt x 103.38625pt>
+File: out_rommath_origin/items/geo435-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo435-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo435-origin/assets/figure_c
+ircle.png  used on input line 363.
+(pdftex.def)             Requested size: 147.20268pt x 134.1765pt.
+
+
+[8 <./out_rommath_origin/items/geo373-origin/assets/figure.png (PNG copy)> <./o
+ut_rommath_origin/items/geo373-origin/assets/figure_rot30.png> <./out_rommath_o
+rigin/items/geo373-origin/assets/figure_rot90.png> <./out_rommath_origin/items/
+geo373-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo373-orig
+in/assets/figure_circle.png> <./out_rommath_origin/items/geo435-origin/assets/f
+igure.png (PNG copy)> <./out_rommath_origin/items/geo435-origin/assets/figure_r
+ot30.png> <./out_rommath_origin/items/geo435-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 371--376
+
+ []
+
+<out_rommath_origin/items/geo485-origin/assets/figure.png, id=119, 128.48pt x 1
+02.3825pt>
+File: out_rommath_origin/items/geo485-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo485-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo485-origin/assets/figure.p
+ng  used on input line 380.
+(pdftex.def)             Requested size: 147.20268pt x 117.3109pt.
+<out_rommath_origin/items/geo485-origin/assets/figure_rot30.png, id=120, 128.48
+pt x 102.3825pt>
+File: out_rommath_origin/items/geo485-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo485-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo485-origin/assets/figure_r
+ot30.png  used on input line 384.
+(pdftex.def)             Requested size: 147.20268pt x 117.3109pt.
+<out_rommath_origin/items/geo485-origin/assets/figure_rot90.png, id=121, 128.48
+pt x 102.3825pt>
+File: out_rommath_origin/items/geo485-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo485-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo485-origin/assets/figure_r
+ot90.png  used on input line 388.
+(pdftex.def)             Requested size: 147.20268pt x 117.3109pt.
+<out_rommath_origin/items/geo485-origin/assets/figure_rot180.png, id=122, 128.4
+8pt x 102.3825pt>
+File: out_rommath_origin/items/geo485-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo485-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo485-origin/assets/figure_r
+ot180.png  used on input line 393.
+(pdftex.def)             Requested size: 147.20268pt x 117.3109pt.
+<out_rommath_origin/items/geo485-origin/assets/figure_circle.png, id=123, 128.4
+8pt x 102.3825pt>
+File: out_rommath_origin/items/geo485-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo485-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo485-origin/assets/figure_c
+ircle.png  used on input line 397.
+(pdftex.def)             Requested size: 147.20268pt x 117.3109pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--410
+
+ []
+
+
+
+[9 <./out_rommath_origin/items/geo435-origin/assets/figure_rot180.png> <./out_r
+ommath_origin/items/geo435-origin/assets/figure_circle.png> <./out_rommath_orig
+in/items/geo485-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/item
+s/geo485-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo485-ori
+gin/assets/figure_rot90.png> <./out_rommath_origin/items/geo485-origin/assets/f
+igure_rot180.png> <./out_rommath_origin/items/geo485-origin/assets/figure_circl
+e.png>]
+<out_rommath_origin/items/geo489-origin/assets/figure.png, id=133, 106.3975pt x
+ 100.375pt>
+File: out_rommath_origin/items/geo489-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo489-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo489-origin/assets/figure.p
+ng  used on input line 414.
+(pdftex.def)             Requested size: 147.20268pt x 138.87755pt.
+<out_rommath_origin/items/geo489-origin/assets/figure_rot30.png, id=134, 106.39
+75pt x 100.375pt>
+File: out_rommath_origin/items/geo489-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo489-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo489-origin/assets/figure_r
+ot30.png  used on input line 418.
+(pdftex.def)             Requested size: 147.20268pt x 138.87755pt.
+<out_rommath_origin/items/geo489-origin/assets/figure_rot90.png, id=135, 106.39
+75pt x 100.375pt>
+File: out_rommath_origin/items/geo489-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo489-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo489-origin/assets/figure_r
+ot90.png  used on input line 422.
+(pdftex.def)             Requested size: 147.20268pt x 138.87755pt.
+<out_rommath_origin/items/geo489-origin/assets/figure_rot180.png, id=136, 106.3
+975pt x 100.375pt>
+File: out_rommath_origin/items/geo489-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo489-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo489-origin/assets/figure_r
+ot180.png  used on input line 427.
+(pdftex.def)             Requested size: 147.20268pt x 138.87755pt.
+<out_rommath_origin/items/geo489-origin/assets/figure_circle.png, id=137, 106.3
+975pt x 100.375pt>
+File: out_rommath_origin/items/geo489-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo489-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo489-origin/assets/figure_c
+ircle.png  used on input line 431.
+(pdftex.def)             Requested size: 147.20268pt x 138.87755pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--444
+
+ []
+
+<out_rommath_origin/items/geo492-origin/assets/figure.png, id=138, 110.4125pt x
+ 117.43875pt>
+File: out_rommath_origin/items/geo492-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo492-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo492-origin/assets/figure.p
+ng  used on input line 448.
+(pdftex.def)             Requested size: 147.20268pt x 156.57683pt.
+<out_rommath_origin/items/geo492-origin/assets/figure_rot30.png, id=139, 110.41
+25pt x 117.43875pt>
+File: out_rommath_origin/items/geo492-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo492-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo492-origin/assets/figure_r
+ot30.png  used on input line 452.
+(pdftex.def)             Requested size: 147.20268pt x 156.57683pt.
+<out_rommath_origin/items/geo492-origin/assets/figure_rot90.png, id=140, 110.41
+25pt x 117.43875pt>
+File: out_rommath_origin/items/geo492-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo492-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo492-origin/assets/figure_r
+ot90.png  used on input line 456.
+(pdftex.def)             Requested size: 147.20268pt x 156.57683pt.
+
+
+[10 <./out_rommath_origin/items/geo489-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo489-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo489-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo489-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo489-ori
+gin/assets/figure_circle.png>]
+<out_rommath_origin/items/geo492-origin/assets/figure_rot180.png, id=148, 110.4
+125pt x 117.43875pt>
+File: out_rommath_origin/items/geo492-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo492-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo492-origin/assets/figure_r
+ot180.png  used on input line 461.
+(pdftex.def)             Requested size: 147.20268pt x 156.57683pt.
+<out_rommath_origin/items/geo492-origin/assets/figure_circle.png, id=149, 110.4
+125pt x 117.43875pt>
+File: out_rommath_origin/items/geo492-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo492-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo492-origin/assets/figure_c
+ircle.png  used on input line 465.
+(pdftex.def)             Requested size: 147.20268pt x 156.57683pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--478
+
+ []
+
+<out_rommath_origin/items/geo500-origin/assets/figure.png, id=150, 95.35625pt x
+ 106.3975pt>
+File: out_rommath_origin/items/geo500-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo500-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo500-origin/assets/figure.p
+ng  used on input line 482.
+(pdftex.def)             Requested size: 147.20268pt x 164.26825pt.
+<out_rommath_origin/items/geo500-origin/assets/figure_rot30.png, id=151, 95.356
+25pt x 106.3975pt>
+File: out_rommath_origin/items/geo500-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo500-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo500-origin/assets/figure_r
+ot30.png  used on input line 486.
+(pdftex.def)             Requested size: 147.20268pt x 164.26825pt.
+<out_rommath_origin/items/geo500-origin/assets/figure_rot90.png, id=152, 95.356
+25pt x 106.3975pt>
+File: out_rommath_origin/items/geo500-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo500-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo500-origin/assets/figure_r
+ot90.png  used on input line 490.
+(pdftex.def)             Requested size: 147.20268pt x 164.26825pt.
+<out_rommath_origin/items/geo500-origin/assets/figure_rot180.png, id=153, 95.35
+625pt x 106.3975pt>
+File: out_rommath_origin/items/geo500-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo500-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo500-origin/assets/figure_r
+ot180.png  used on input line 495.
+(pdftex.def)             Requested size: 147.20268pt x 164.26825pt.
+<out_rommath_origin/items/geo500-origin/assets/figure_circle.png, id=154, 95.35
+625pt x 106.3975pt>
+File: out_rommath_origin/items/geo500-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo500-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo500-origin/assets/figure_c
+ircle.png  used on input line 499.
+(pdftex.def)             Requested size: 147.20268pt x 164.26825pt.
+
+
+[11 <./out_rommath_origin/items/geo492-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo492-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo492-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo492-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo492-ori
+gin/assets/figure_circle.png> <./out_rommath_origin/items/geo500-origin/assets/
+figure.png (PNG copy)> <./out_rommath_origin/items/geo500-origin/assets/figure_
+rot30.png> <./out_rommath_origin/items/geo500-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 507--512
+
+ []
+
+<out_rommath_origin/items/geo501-origin/assets/figure.png, id=164, 123.46124pt 
+x 107.40125pt>
+File: out_rommath_origin/items/geo501-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo501-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo501-origin/assets/figure.p
+ng  used on input line 516.
+(pdftex.def)             Requested size: 147.20268pt x 128.06143pt.
+<out_rommath_origin/items/geo501-origin/assets/figure_rot30.png, id=165, 123.46
+124pt x 107.40125pt>
+File: out_rommath_origin/items/geo501-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo501-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo501-origin/assets/figure_r
+ot30.png  used on input line 520.
+(pdftex.def)             Requested size: 147.20268pt x 128.06143pt.
+<out_rommath_origin/items/geo501-origin/assets/figure_rot90.png, id=166, 123.46
+124pt x 107.40125pt>
+File: out_rommath_origin/items/geo501-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo501-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo501-origin/assets/figure_r
+ot90.png  used on input line 524.
+(pdftex.def)             Requested size: 147.20268pt x 128.06143pt.
+<out_rommath_origin/items/geo501-origin/assets/figure_rot180.png, id=167, 123.4
+6124pt x 107.40125pt>
+File: out_rommath_origin/items/geo501-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo501-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo501-origin/assets/figure_r
+ot180.png  used on input line 529.
+(pdftex.def)             Requested size: 147.20268pt x 128.06143pt.
+<out_rommath_origin/items/geo501-origin/assets/figure_circle.png, id=168, 123.4
+6124pt x 107.40125pt>
+File: out_rommath_origin/items/geo501-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo501-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo501-origin/assets/figure_c
+ircle.png  used on input line 533.
+(pdftex.def)             Requested size: 147.20268pt x 128.06143pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 541--546
+
+ []
+
+
+
+[12 <./out_rommath_origin/items/geo500-origin/assets/figure_rot180.png> <./out_
+rommath_origin/items/geo500-origin/assets/figure_circle.png> <./out_rommath_ori
+gin/items/geo501-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/ite
+ms/geo501-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo501-or
+igin/assets/figure_rot90.png> <./out_rommath_origin/items/geo501-origin/assets/
+figure_rot180.png> <./out_rommath_origin/items/geo501-origin/assets/figure_circ
+le.png>]
+<out_rommath_origin/items/geo508-origin/assets/figure.png, id=178, 128.48pt x 1
+17.43875pt>
+File: out_rommath_origin/items/geo508-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo508-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo508-origin/assets/figure.p
+ng  used on input line 550.
+(pdftex.def)             Requested size: 147.20268pt x 134.56248pt.
+<out_rommath_origin/items/geo508-origin/assets/figure_rot30.png, id=179, 128.48
+pt x 117.43875pt>
+File: out_rommath_origin/items/geo508-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo508-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo508-origin/assets/figure_r
+ot30.png  used on input line 554.
+(pdftex.def)             Requested size: 147.20268pt x 134.56248pt.
+<out_rommath_origin/items/geo508-origin/assets/figure_rot90.png, id=180, 128.48
+pt x 117.43875pt>
+File: out_rommath_origin/items/geo508-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo508-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo508-origin/assets/figure_r
+ot90.png  used on input line 558.
+(pdftex.def)             Requested size: 147.20268pt x 134.56248pt.
+<out_rommath_origin/items/geo508-origin/assets/figure_rot180.png, id=181, 128.4
+8pt x 117.43875pt>
+File: out_rommath_origin/items/geo508-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo508-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo508-origin/assets/figure_r
+ot180.png  used on input line 563.
+(pdftex.def)             Requested size: 147.20268pt x 134.56248pt.
+<out_rommath_origin/items/geo508-origin/assets/figure_circle.png, id=182, 128.4
+8pt x 117.43875pt>
+File: out_rommath_origin/items/geo508-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo508-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo508-origin/assets/figure_c
+ircle.png  used on input line 567.
+(pdftex.def)             Requested size: 147.20268pt x 134.56248pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--580
+
+ []
+
+<out_rommath_origin/items/geo509-origin/assets/figure.png, id=183, 125.46875pt 
+x 123.46124pt>
+File: out_rommath_origin/items/geo509-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo509-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo509-origin/assets/figure.p
+ng  used on input line 584.
+(pdftex.def)             Requested size: 147.20268pt x 144.8635pt.
+<out_rommath_origin/items/geo509-origin/assets/figure_rot30.png, id=184, 125.46
+875pt x 123.46124pt>
+File: out_rommath_origin/items/geo509-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo509-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo509-origin/assets/figure_r
+ot30.png  used on input line 588.
+(pdftex.def)             Requested size: 147.20268pt x 144.8635pt.
+<out_rommath_origin/items/geo509-origin/assets/figure_rot90.png, id=185, 125.46
+875pt x 123.46124pt>
+File: out_rommath_origin/items/geo509-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo509-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo509-origin/assets/figure_r
+ot90.png  used on input line 592.
+(pdftex.def)             Requested size: 147.20268pt x 144.8635pt.
+
+
+[13 <./out_rommath_origin/items/geo508-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo508-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo508-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo508-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo508-ori
+gin/assets/figure_circle.png>]
+<out_rommath_origin/items/geo509-origin/assets/figure_rot180.png, id=194, 125.4
+6875pt x 123.46124pt>
+File: out_rommath_origin/items/geo509-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo509-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo509-origin/assets/figure_r
+ot180.png  used on input line 597.
+(pdftex.def)             Requested size: 147.20268pt x 144.8635pt.
+<out_rommath_origin/items/geo509-origin/assets/figure_circle.png, id=195, 125.4
+6875pt x 123.46124pt>
+File: out_rommath_origin/items/geo509-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo509-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo509-origin/assets/figure_c
+ircle.png  used on input line 601.
+(pdftex.def)             Requested size: 147.20268pt x 144.8635pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--614
+
+ []
+
+<out_rommath_origin/items/geo557-origin/assets/figure.png, id=196, 154.5775pt x
+ 159.59625pt>
+File: out_rommath_origin/items/geo557-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo557-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo557-origin/assets/figure.p
+ng  used on input line 618.
+(pdftex.def)             Requested size: 147.20268pt x 151.99545pt.
+<out_rommath_origin/items/geo557-origin/assets/figure_rot30.png, id=197, 154.57
+75pt x 159.59625pt>
+File: out_rommath_origin/items/geo557-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo557-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo557-origin/assets/figure_r
+ot30.png  used on input line 622.
+(pdftex.def)             Requested size: 147.20268pt x 151.99545pt.
+<out_rommath_origin/items/geo557-origin/assets/figure_rot90.png, id=198, 154.57
+75pt x 159.59625pt>
+File: out_rommath_origin/items/geo557-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo557-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo557-origin/assets/figure_r
+ot90.png  used on input line 626.
+(pdftex.def)             Requested size: 147.20268pt x 151.99545pt.
+<out_rommath_origin/items/geo557-origin/assets/figure_rot180.png, id=199, 154.5
+775pt x 159.59625pt>
+File: out_rommath_origin/items/geo557-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo557-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo557-origin/assets/figure_r
+ot180.png  used on input line 631.
+(pdftex.def)             Requested size: 147.20268pt x 151.99545pt.
+<out_rommath_origin/items/geo557-origin/assets/figure_circle.png, id=200, 154.5
+775pt x 159.59625pt>
+File: out_rommath_origin/items/geo557-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo557-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo557-origin/assets/figure_c
+ircle.png  used on input line 635.
+(pdftex.def)             Requested size: 147.20268pt x 151.99545pt.
+
+
+[14 <./out_rommath_origin/items/geo509-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo509-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo509-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo509-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo509-ori
+gin/assets/figure_circle.png> <./out_rommath_origin/items/geo557-origin/assets/
+figure.png (PNG copy)> <./out_rommath_origin/items/geo557-origin/assets/figure_
+rot30.png> <./out_rommath_origin/items/geo557-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 643--648
+
+ []
+
+<out_rommath_origin/items/geo578-origin/assets/figure.png, id=210, 167.62625pt 
+x 124.465pt>
+File: out_rommath_origin/items/geo578-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo578-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo578-origin/assets/figure.p
+ng  used on input line 652.
+(pdftex.def)             Requested size: 147.20268pt x 109.29973pt.
+<out_rommath_origin/items/geo578-origin/assets/figure_rot30.png, id=211, 167.62
+625pt x 124.465pt>
+File: out_rommath_origin/items/geo578-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo578-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo578-origin/assets/figure_r
+ot30.png  used on input line 656.
+(pdftex.def)             Requested size: 147.20268pt x 109.29973pt.
+<out_rommath_origin/items/geo578-origin/assets/figure_rot90.png, id=212, 167.62
+625pt x 124.465pt>
+File: out_rommath_origin/items/geo578-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo578-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo578-origin/assets/figure_r
+ot90.png  used on input line 660.
+(pdftex.def)             Requested size: 147.20268pt x 109.29973pt.
+<out_rommath_origin/items/geo578-origin/assets/figure_rot180.png, id=213, 167.6
+2625pt x 124.465pt>
+File: out_rommath_origin/items/geo578-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo578-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo578-origin/assets/figure_r
+ot180.png  used on input line 665.
+(pdftex.def)             Requested size: 147.20268pt x 109.29973pt.
+<out_rommath_origin/items/geo578-origin/assets/figure_circle.png, id=214, 167.6
+2625pt x 124.465pt>
+File: out_rommath_origin/items/geo578-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo578-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo578-origin/assets/figure_c
+ircle.png  used on input line 669.
+(pdftex.def)             Requested size: 147.20268pt x 109.29973pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 677--682
+
+ []
+
+
+
+[15 <./out_rommath_origin/items/geo557-origin/assets/figure_rot180.png> <./out_
+rommath_origin/items/geo557-origin/assets/figure_circle.png> <./out_rommath_ori
+gin/items/geo578-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/ite
+ms/geo578-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo578-or
+igin/assets/figure_rot90.png> <./out_rommath_origin/items/geo578-origin/assets/
+figure_rot180.png> <./out_rommath_origin/items/geo578-origin/assets/figure_circ
+le.png>]
+<out_rommath_origin/items/geo585-origin/assets/figure.png, id=224, 128.48pt x 1
+26.4725pt>
+File: out_rommath_origin/items/geo585-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo585-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo585-origin/assets/figure.p
+ng  used on input line 686.
+(pdftex.def)             Requested size: 147.20268pt x 144.91347pt.
+<out_rommath_origin/items/geo585-origin/assets/figure_rot30.png, id=225, 128.48
+pt x 126.4725pt>
+File: out_rommath_origin/items/geo585-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo585-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo585-origin/assets/figure_r
+ot30.png  used on input line 690.
+(pdftex.def)             Requested size: 147.20268pt x 144.91347pt.
+<out_rommath_origin/items/geo585-origin/assets/figure_rot90.png, id=226, 128.48
+pt x 126.4725pt>
+File: out_rommath_origin/items/geo585-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo585-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo585-origin/assets/figure_r
+ot90.png  used on input line 694.
+(pdftex.def)             Requested size: 147.20268pt x 144.91347pt.
+<out_rommath_origin/items/geo585-origin/assets/figure_rot180.png, id=227, 128.4
+8pt x 126.4725pt>
+File: out_rommath_origin/items/geo585-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo585-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo585-origin/assets/figure_r
+ot180.png  used on input line 699.
+(pdftex.def)             Requested size: 147.20268pt x 144.91347pt.
+<out_rommath_origin/items/geo585-origin/assets/figure_circle.png, id=228, 128.4
+8pt x 126.4725pt>
+File: out_rommath_origin/items/geo585-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo585-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo585-origin/assets/figure_c
+ircle.png  used on input line 703.
+(pdftex.def)             Requested size: 147.20268pt x 144.91347pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 711--716
+
+ []
+
+<out_rommath_origin/items/geo609-origin/assets/figure.png, id=229, 143.53625pt 
+x 95.35625pt>
+File: out_rommath_origin/items/geo609-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo609-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo609-origin/assets/figure.p
+ng  used on input line 720.
+(pdftex.def)             Requested size: 147.20268pt x 97.7946pt.
+<out_rommath_origin/items/geo609-origin/assets/figure_rot30.png, id=230, 143.53
+625pt x 95.35625pt>
+File: out_rommath_origin/items/geo609-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo609-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo609-origin/assets/figure_r
+ot30.png  used on input line 724.
+(pdftex.def)             Requested size: 147.20268pt x 97.7946pt.
+<out_rommath_origin/items/geo609-origin/assets/figure_rot90.png, id=231, 143.53
+625pt x 95.35625pt>
+File: out_rommath_origin/items/geo609-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo609-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo609-origin/assets/figure_r
+ot90.png  used on input line 728.
+(pdftex.def)             Requested size: 147.20268pt x 97.7946pt.
+
+
+[16 <./out_rommath_origin/items/geo585-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo585-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo585-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo585-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo585-ori
+gin/assets/figure_circle.png>]
+<out_rommath_origin/items/geo609-origin/assets/figure_rot180.png, id=239, 143.5
+3625pt x 95.35625pt>
+File: out_rommath_origin/items/geo609-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo609-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo609-origin/assets/figure_r
+ot180.png  used on input line 733.
+(pdftex.def)             Requested size: 147.20268pt x 97.7946pt.
+<out_rommath_origin/items/geo609-origin/assets/figure_circle.png, id=240, 143.5
+3625pt x 95.35625pt>
+File: out_rommath_origin/items/geo609-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo609-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo609-origin/assets/figure_c
+ircle.png  used on input line 737.
+(pdftex.def)             Requested size: 147.20268pt x 97.7946pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 745--750
+
+ []
+
+<out_rommath_origin/items/geo619-origin/assets/figure.png, id=241, 106.3975pt x
+ 97.36375pt>
+File: out_rommath_origin/items/geo619-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo619-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo619-origin/assets/figure.p
+ng  used on input line 754.
+(pdftex.def)             Requested size: 147.20268pt x 134.71121pt.
+<out_rommath_origin/items/geo619-origin/assets/figure_rot30.png, id=242, 106.39
+75pt x 97.36375pt>
+File: out_rommath_origin/items/geo619-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo619-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo619-origin/assets/figure_r
+ot30.png  used on input line 758.
+(pdftex.def)             Requested size: 147.20268pt x 134.71121pt.
+<out_rommath_origin/items/geo619-origin/assets/figure_rot90.png, id=243, 106.39
+75pt x 97.36375pt>
+File: out_rommath_origin/items/geo619-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo619-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo619-origin/assets/figure_r
+ot90.png  used on input line 762.
+(pdftex.def)             Requested size: 147.20268pt x 134.71121pt.
+<out_rommath_origin/items/geo619-origin/assets/figure_rot180.png, id=244, 106.3
+975pt x 97.36375pt>
+File: out_rommath_origin/items/geo619-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo619-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo619-origin/assets/figure_r
+ot180.png  used on input line 767.
+(pdftex.def)             Requested size: 147.20268pt x 134.71121pt.
+<out_rommath_origin/items/geo619-origin/assets/figure_circle.png, id=245, 106.3
+975pt x 97.36375pt>
+File: out_rommath_origin/items/geo619-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo619-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo619-origin/assets/figure_c
+ircle.png  used on input line 771.
+(pdftex.def)             Requested size: 147.20268pt x 134.71121pt.
+
+
+[17 <./out_rommath_origin/items/geo609-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo609-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo609-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo609-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo609-ori
+gin/assets/figure_circle.png> <./out_rommath_origin/items/geo619-origin/assets/
+figure.png (PNG copy)> <./out_rommath_origin/items/geo619-origin/assets/figure_
+rot30.png> <./out_rommath_origin/items/geo619-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 779--784
+
+ []
+
+<out_rommath_origin/items/geo655-origin/assets/figure.png, id=255, 145.54375pt 
+x 96.36pt>
+File: out_rommath_origin/items/geo655-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo655-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo655-origin/assets/figure.p
+ng  used on input line 788.
+(pdftex.def)             Requested size: 147.20268pt x 97.46542pt.
+<out_rommath_origin/items/geo655-origin/assets/figure_rot30.png, id=256, 145.54
+375pt x 96.36pt>
+File: out_rommath_origin/items/geo655-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo655-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo655-origin/assets/figure_r
+ot30.png  used on input line 792.
+(pdftex.def)             Requested size: 147.20268pt x 97.46542pt.
+<out_rommath_origin/items/geo655-origin/assets/figure_rot90.png, id=257, 145.54
+375pt x 96.36pt>
+File: out_rommath_origin/items/geo655-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo655-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo655-origin/assets/figure_r
+ot90.png  used on input line 796.
+(pdftex.def)             Requested size: 147.20268pt x 97.46542pt.
+<out_rommath_origin/items/geo655-origin/assets/figure_rot180.png, id=258, 145.5
+4375pt x 96.36pt>
+File: out_rommath_origin/items/geo655-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo655-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo655-origin/assets/figure_r
+ot180.png  used on input line 801.
+(pdftex.def)             Requested size: 147.20268pt x 97.46542pt.
+<out_rommath_origin/items/geo655-origin/assets/figure_circle.png, id=259, 145.5
+4375pt x 96.36pt>
+File: out_rommath_origin/items/geo655-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo655-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo655-origin/assets/figure_c
+ircle.png  used on input line 805.
+(pdftex.def)             Requested size: 147.20268pt x 97.46542pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 813--818
+
+ []
+
+
+
+[18 <./out_rommath_origin/items/geo619-origin/assets/figure_rot180.png> <./out_
+rommath_origin/items/geo619-origin/assets/figure_circle.png> <./out_rommath_ori
+gin/items/geo655-origin/assets/figure.png (PNG copy)> <./out_rommath_origin/ite
+ms/geo655-origin/assets/figure_rot30.png> <./out_rommath_origin/items/geo655-or
+igin/assets/figure_rot90.png> <./out_rommath_origin/items/geo655-origin/assets/
+figure_rot180.png> <./out_rommath_origin/items/geo655-origin/assets/figure_circ
+le.png>]
+<out_rommath_origin/items/geo663-origin/assets/figure.png, id=269, 96.36pt x 98
+.3675pt>
+File: out_rommath_origin/items/geo663-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo663-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo663-origin/assets/figure.p
+ng  used on input line 822.
+(pdftex.def)             Requested size: 147.20268pt x 150.26909pt.
+<out_rommath_origin/items/geo663-origin/assets/figure_rot30.png, id=270, 96.36p
+t x 98.3675pt>
+File: out_rommath_origin/items/geo663-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo663-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo663-origin/assets/figure_r
+ot30.png  used on input line 826.
+(pdftex.def)             Requested size: 147.20268pt x 150.26909pt.
+<out_rommath_origin/items/geo663-origin/assets/figure_rot90.png, id=271, 96.36p
+t x 98.3675pt>
+File: out_rommath_origin/items/geo663-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo663-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo663-origin/assets/figure_r
+ot90.png  used on input line 830.
+(pdftex.def)             Requested size: 147.20268pt x 150.26909pt.
+<out_rommath_origin/items/geo663-origin/assets/figure_rot180.png, id=272, 96.36
+pt x 98.3675pt>
+File: out_rommath_origin/items/geo663-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo663-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo663-origin/assets/figure_r
+ot180.png  used on input line 835.
+(pdftex.def)             Requested size: 147.20268pt x 150.26909pt.
+<out_rommath_origin/items/geo663-origin/assets/figure_circle.png, id=273, 96.36
+pt x 98.3675pt>
+File: out_rommath_origin/items/geo663-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo663-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo663-origin/assets/figure_c
+ircle.png  used on input line 839.
+(pdftex.def)             Requested size: 147.20268pt x 150.26909pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 847--852
+
+ []
+
+<out_rommath_origin/items/geo689-origin/assets/figure.png, id=274, 156.585pt x 
+140.525pt>
+File: out_rommath_origin/items/geo689-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo689-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo689-origin/assets/figure.p
+ng  used on input line 856.
+(pdftex.def)             Requested size: 147.20268pt x 132.1085pt.
+<out_rommath_origin/items/geo689-origin/assets/figure_rot30.png, id=275, 156.58
+5pt x 140.525pt>
+File: out_rommath_origin/items/geo689-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo689-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo689-origin/assets/figure_r
+ot30.png  used on input line 860.
+(pdftex.def)             Requested size: 147.20268pt x 132.1085pt.
+<out_rommath_origin/items/geo689-origin/assets/figure_rot90.png, id=276, 156.58
+5pt x 140.525pt>
+File: out_rommath_origin/items/geo689-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo689-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo689-origin/assets/figure_r
+ot90.png  used on input line 864.
+(pdftex.def)             Requested size: 147.20268pt x 132.1085pt.
+
+
+[19 <./out_rommath_origin/items/geo663-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo663-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo663-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo663-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo663-ori
+gin/assets/figure_circle.png>]
+<out_rommath_origin/items/geo689-origin/assets/figure_rot180.png, id=285, 156.5
+85pt x 140.525pt>
+File: out_rommath_origin/items/geo689-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo689-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo689-origin/assets/figure_r
+ot180.png  used on input line 869.
+(pdftex.def)             Requested size: 147.20268pt x 132.1085pt.
+<out_rommath_origin/items/geo689-origin/assets/figure_circle.png, id=286, 156.5
+85pt x 140.525pt>
+File: out_rommath_origin/items/geo689-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo689-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo689-origin/assets/figure_c
+ircle.png  used on input line 873.
+(pdftex.def)             Requested size: 147.20268pt x 132.1085pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 881--886
+
+ []
+
+<out_rommath_origin/items/geo697-origin/assets/figure.png, id=287, 100.375pt x 
+100.375pt>
+File: out_rommath_origin/items/geo697-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo697-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo697-origin/assets/figure.p
+ng  used on input line 890.
+(pdftex.def)             Requested size: 147.20268pt x 147.22475pt.
+<out_rommath_origin/items/geo697-origin/assets/figure_rot30.png, id=288, 100.37
+5pt x 100.375pt>
+File: out_rommath_origin/items/geo697-origin/assets/figure_rot30.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo697-origin/assets/figure_rot30.png>
+Package pdftex.def Info: out_rommath_origin/items/geo697-origin/assets/figure_r
+ot30.png  used on input line 894.
+(pdftex.def)             Requested size: 147.20268pt x 147.22475pt.
+<out_rommath_origin/items/geo697-origin/assets/figure_rot90.png, id=289, 100.37
+5pt x 100.375pt>
+File: out_rommath_origin/items/geo697-origin/assets/figure_rot90.png Graphic fi
+le (type png)
+<use out_rommath_origin/items/geo697-origin/assets/figure_rot90.png>
+Package pdftex.def Info: out_rommath_origin/items/geo697-origin/assets/figure_r
+ot90.png  used on input line 898.
+(pdftex.def)             Requested size: 147.20268pt x 147.22475pt.
+<out_rommath_origin/items/geo697-origin/assets/figure_rot180.png, id=290, 100.3
+75pt x 100.375pt>
+File: out_rommath_origin/items/geo697-origin/assets/figure_rot180.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo697-origin/assets/figure_rot180.png>
+Package pdftex.def Info: out_rommath_origin/items/geo697-origin/assets/figure_r
+ot180.png  used on input line 903.
+(pdftex.def)             Requested size: 147.20268pt x 147.22475pt.
+<out_rommath_origin/items/geo697-origin/assets/figure_circle.png, id=291, 100.3
+75pt x 100.375pt>
+File: out_rommath_origin/items/geo697-origin/assets/figure_circle.png Graphic f
+ile (type png)
+<use out_rommath_origin/items/geo697-origin/assets/figure_circle.png>
+Package pdftex.def Info: out_rommath_origin/items/geo697-origin/assets/figure_c
+ircle.png  used on input line 907.
+(pdftex.def)             Requested size: 147.20268pt x 147.22475pt.
+
+
+[20 <./out_rommath_origin/items/geo689-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo689-origin/assets/figure_rot30.png> <./out_rommath_
+origin/items/geo689-origin/assets/figure_rot90.png> <./out_rommath_origin/items
+/geo689-origin/assets/figure_rot180.png> <./out_rommath_origin/items/geo689-ori
+gin/assets/figure_circle.png> <./out_rommath_origin/items/geo697-origin/assets/
+figure.png (PNG copy)> <./out_rommath_origin/items/geo697-origin/assets/figure_
+rot30.png> <./out_rommath_origin/items/geo697-origin/assets/figure_rot90.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 915--920
+
+ []
+
+<out_rommath_origin/items/geo698-origin/assets/figure.png, id=301, 143.53625pt 
+x 150.5625pt>
+File: out_rommath_origin/items/geo698-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo698-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo698-origin/assets/figure.p
+ng  used on input line 924.
+(pdftex.def)             Requested size: 147.20268pt x 154.41255pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 932--937
+
+ []
+
+<out_rommath_origin/items/geo713-origin/assets/figure.png, id=302, 103.38625pt 
+x 114.4275pt>
+File: out_rommath_origin/items/geo713-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo713-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo713-origin/assets/figure.p
+ng  used on input line 941.
+(pdftex.def)             Requested size: 147.20268pt x 162.9404pt.
+
+
+[21 <./out_rommath_origin/items/geo697-origin/assets/figure_rot180.png> <./out_
+rommath_origin/items/geo697-origin/assets/figure_circle.png> <./out_rommath_ori
+gin/items/geo698-origin/assets/figure.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 949--954
+
+ []
+
+<out_rommath_origin/items/geo738-origin/assets/figure.png, id=308, 158.5925pt x
+ 91.34125pt>
+File: out_rommath_origin/items/geo738-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo738-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo738-origin/assets/figure.p
+ng  used on input line 958.
+(pdftex.def)             Requested size: 147.20268pt x 84.78758pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 966--971
+
+ []
+
+<out_rommath_origin/items/geo739-origin/assets/figure.png, id=309, 162.6075pt x
+ 103.38625pt>
+File: out_rommath_origin/items/geo739-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo739-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo739-origin/assets/figure.p
+ng  used on input line 975.
+(pdftex.def)             Requested size: 147.20268pt x 93.59889pt.
+
+
+[22 <./out_rommath_origin/items/geo713-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo738-origin/assets/figure.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 983--988
+
+ []
+
+<out_rommath_origin/items/geo751-origin/assets/figure.png, id=313, 91.34125pt x
+ 106.3975pt>
+File: out_rommath_origin/items/geo751-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo751-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo751-origin/assets/figure.p
+ng  used on input line 992.
+(pdftex.def)             Requested size: 147.20268pt x 171.48955pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1005
+
+ []
+
+<out_rommath_origin/items/geo847-origin/assets/figure.png, id=314, 183.68625pt 
+x 97.36375pt>
+File: out_rommath_origin/items/geo847-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo847-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo847-origin/assets/figure.p
+ng  used on input line 1009.
+(pdftex.def)             Requested size: 147.20268pt x 78.03073pt.
+
+
+[23 <./out_rommath_origin/items/geo739-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo751-origin/assets/figure.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 1017--1022
+
+ []
+
+<out_rommath_origin/items/geo875-origin/assets/figure.png, id=318, 211.79124pt 
+x 99.37125pt>
+File: out_rommath_origin/items/geo875-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo875-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo875-origin/assets/figure.p
+ng  used on input line 1026.
+(pdftex.def)             Requested size: 147.20268pt x 69.06963pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1034--1039
+
+ []
+
+<out_rommath_origin/items/geo905-origin/assets/figure.png, id=319, 120.45pt x 1
+04.39pt>
+File: out_rommath_origin/items/geo905-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo905-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo905-origin/assets/figure.p
+ng  used on input line 1043.
+(pdftex.def)             Requested size: 147.20268pt x 127.58813pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1056
+
+ []
+
+
+
+[24 <./out_rommath_origin/items/geo847-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo875-origin/assets/figure.png (PNG copy)> <./out_rom
+math_origin/items/geo905-origin/assets/figure.png (PNG copy)>]
+<out_rommath_origin/items/geo932-origin/assets/figure.png, id=323, 156.585pt x 
+167.62625pt>
+File: out_rommath_origin/items/geo932-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo932-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo932-origin/assets/figure.p
+ng  used on input line 1060.
+(pdftex.def)             Requested size: 147.20268pt x 157.58658pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1073
+
+ []
+
+<out_rommath_origin/items/geo977-origin/assets/figure.png, id=324, 140.525pt x 
+101.37875pt>
+File: out_rommath_origin/items/geo977-origin/assets/figure.png Graphic file (ty
+pe png)
+<use out_rommath_origin/items/geo977-origin/assets/figure.png>
+Package pdftex.def Info: out_rommath_origin/items/geo977-origin/assets/figure.p
+ng  used on input line 1077.
+(pdftex.def)             Requested size: 147.20268pt x 106.20177pt.
+
+
+[25 <./out_rommath_origin/items/geo932-origin/assets/figure.png (PNG copy)> <./
+out_rommath_origin/items/geo977-origin/assets/figure.png (PNG copy)>]
+(./rommath_origin_showcase.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 3556 strings out of 473190
+ 104711 string characters out of 5715801
+ 444142 words of memory out of 5000000
+ 26814 multiletter control sequences out of 15000+600000
+ 564516 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,10n,65p,406b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
+sr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on rommath_origin_showcase.pdf (25 pages, 838707 bytes).
+PDF statistics:
+ 352 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 691 words of extra memory for PDF output out of 10000 (max. 10000000)
+
