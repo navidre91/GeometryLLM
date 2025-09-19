@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Variants",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["variant_id"],
+    "properties": {
+      "variant_id": {"type":"string"},
+      "text_included": {"type":"boolean"},
+      "text_drop": { "type":"array", "items":{"type":"string"} },
+      "image": {"type":["string","null"]},
+      "render_ops": {"type":"array","items":{"type":"string"}},
+      "mark_removed": {"type":"array","items":{"type":"string"}},
+      "expected_effect": {"type":"string"},
+      "decisive_symbol": {"type":"string"}
+    }
+  }
+}

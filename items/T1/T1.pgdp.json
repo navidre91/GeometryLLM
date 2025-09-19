@@ -28,26 +28,31 @@
   ],
   "lines": [
     {
+      "type": "Line",
       "id": "PA",
       "p1": "P",
       "p2": "A"
     },
     {
+      "type": "Line",
       "id": "AB",
       "p1": "A",
       "p2": "B"
     },
     {
+      "type": "Line",
       "id": "OA",
       "p1": "O",
       "p2": "A"
     },
     {
+      "type": "Line",
       "id": "AC",
       "p1": "A",
       "p2": "C"
     },
     {
+      "type": "Line",
       "id": "BC",
       "p1": "B",
       "p2": "C"
@@ -55,6 +60,7 @@
   ],
   "circles": [
     {
+      "type": "Circle",
       "id": "circleO",
       "center": "O",
       "radius": 140
@@ -91,7 +97,7 @@
   "texts": [
     {
       "id": "t31",
-      "string": "31°",
+      "string": "31\u00b0",
       "anchor": "A"
     },
     {

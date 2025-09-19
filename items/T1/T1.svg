@@ -1,37 +1,7 @@
-<svg id="T1" xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
-  <defs>
-    <style><![CDATA[
-      .prim { fill: none; stroke: black; stroke-width: 2; }
-      .sym { fill: none; stroke: black; stroke-width: 2; }
-      .lbl { font-family: Arial, sans-serif; font-size: 14px; }
-      .measure { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
-      .pt { fill: black; }
-    ]]></style>
-  </defs>
-  <g id="primitives">
-    <circle id="circleO" class="prim" cx="200" cy="200" r="140" />
-    <line id="PA" class="prim" x1="340" y1="40" x2="340" y2="200" />
-    <line id="AB" class="prim" x1="340" y1="200" x2="130" y2="79" />
-    <line id="OA" class="prim" x1="200" y1="200" x2="340" y2="200" />
-    <line id="AC" class="prim" x1="340" y1="200" x2="270" y2="79" />
-    <line id="BC" class="prim" x1="130" y1="79" x2="270" y2="79" />
-  </g>
-  <g id="symbols" opacity="1.0">
-    <path id="ang_PAB" class="sym" d="M 340.0 180.0 A 20 20 0 0 1 322.7 190.0" />
-    <rect id="perp_OA_PA" class="sym" x="332" y="192" width="8" height="8" />
-    <text id="tangA" class="lbl" x="350" y="190">⊥</text>
-  </g>
-  <g id="labels">
-    <circle id="pt_A" class="pt" cx="340" cy="200" r="3" />
-    <circle id="pt_B" class="pt" cx="130" cy="79" r="3" />
-    <circle id="pt_C" class="pt" cx="270" cy="79" r="3" />
-    <circle id="pt_P" class="pt" cx="340" cy="40" r="3" />
-    <circle id="pt_O" class="pt" cx="200" cy="200" r="3" />
-    <text id="lblA" class="lbl" x="348" y="192">A</text>
-    <text id="lblB" class="lbl" x="118" y="71">B</text>
-    <text id="lblC" class="lbl" x="278" y="71">C</text>
-    <text id="lblP" class="lbl" x="348" y="32">P</text>
-    <text id="lblO" class="lbl" x="190" y="214">O</text>
-    <text id="t31" class="measure" x="312" y="190">31°</text>
-  </g>
-</svg>
+<?xml version="1.0" encoding="utf-8" ?>
+<svg baseProfile="full" height="400" id="T1" version="1.1" viewBox="0 0 400 400" width="400" xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><style type="text/css"><![CDATA[.prim { fill: none; stroke: black; stroke-width: 2; }
+.sym { fill: none; stroke: black; stroke-width: 2; }
+.lbl { font-family: Arial, sans-serif; font-size: 14px; }
+.measure { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; }
+.pt { fill: black; }
+]]></style></defs><g id="primitives"><circle class="prim" cx="200" cy="200" id="circleO" r="140" /><line class="prim" id="PA" x1="340" x2="340" y1="40" y2="200" /><line class="prim" id="AB" x1="340" x2="130" y1="200" y2="79" /><line class="prim" id="OA" x1="200" x2="340" y1="200" y2="200" /><line class="prim" id="AC" x1="340" x2="270" y1="200" y2="79" /><line class="prim" id="BC" x1="130" x2="270" y1="79" y2="79" /></g><g id="symbols"><text class="lbl" id="tangA" x="330.0" y="200.0">⊥</text><path class="sym" d="M 322.7 190 A 20 20 0 0 1 340 180" id="ang_PAB" /><rect class="sym" height="8" id="perp_OA_PA" width="8" x="336.0" y="196.0" /></g><g id="labels"><circle class="pt" cx="200" cy="200" id="pt_O" r="3" /><circle class="pt" cx="340" cy="200" id="pt_A" r="3" /><circle class="pt" cx="130" cy="79" id="pt_B" r="3" /><circle class="pt" cx="270" cy="79" id="pt_C" r="3" /><circle class="pt" cx="340" cy="40" id="pt_P" r="3" /><text class="measure" id="t31" x="312" y="190">31°</text><text class="lbl" id="lblA" x="348" y="192">A</text><text class="lbl" id="lblB" x="138" y="71">B</text><text class="lbl" id="lblC" x="278" y="71">C</text><text class="lbl" id="lblP" x="348" y="32">P</text><text class="lbl" id="lblO" x="208" y="192">O</text></g></svg>
